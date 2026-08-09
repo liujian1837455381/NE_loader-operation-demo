@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>方案D · 纯数据卡片周报</title>
+<style>
+:root{
+  --bg:#f2f5f9;--card:#fff;--ink:#17243a;--muted:#718096;--line:#e2e8f0;
+  --hit:#16a34a;--near:#d97706;--miss:#dc2626;--blue:#2563eb;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Microsoft YaHei","Segoe UI",sans-serif}
+.num{font-family:"Bahnschrift","DIN Alternate","Arial Narrow","Segoe UI",sans-serif;font-variant-numeric:tabular-nums;letter-spacing:.3px}
+.page{width:min(1380px,calc(100% - 32px));margin:24px auto 50px}
+
+/* ── 页头 ── */
+.top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:18px}
+.top h1{margin:0 0 6px;font-size:25px}
+.top p{margin:0;color:var(--muted);font-size:12px}
+.legend{display:flex;gap:15px;font-size:11px;color:var(--muted)}
+.legend i{display:inline-block;width:7px;height:7px;margin-right:5px;border-radius:50%}
+.source{margin-top:8px;padding:8px 12px;background:#e8eef8;border-radius:8px;color:var(--muted);font-size:12px;text-align:right}
+
+/* ── 站点卡片 ── */
+.station{margin-bottom:22px;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 26px #20334f0c}
+.station-head{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:18px 22px;background:linear-gradient(110deg,#123c70,#17669a);color:#fff}
+.station-title{display:flex;align-items:center;gap:10px;white-space:nowrap}
+.station-name{font-size:21px;font-weight:800}
+.stage{padding:4px 9px;border:1px solid #ffffff40;border-radius:20px;background:#ffffff14;font-size:11px;font-weight:600}
+.week-range{padding-left:12px;border-left:1px solid #ffffff30;font-size:12px;opacity:.85;letter-spacing:.5px}
+.station-score{margin-left:auto;padding-left:20px;border-left:1px solid #ffffff32;text-align:right;white-space:nowrap}
+.station-score b{font-size:24px}
+.station-score span{display:block;font-size:11px;opacity:.7}
+.station-body{padding:18px}
+
+/* ── 指标两行布局 ── */
+.metric-rows{display:grid;gap:12px}
+.metric-row{display:grid;gap:12px;padding:12px;border:1px solid #dce5f0;border-radius:14px;background:#fbfcfe}
+.metric-row.row1{grid-template-columns:1.1fr 1fr}
+.metric-row.row2{grid-template-columns:2fr 1fr 1fr}
+.row-cluster{min-width:0}
+.cluster-head{display:flex;align-items:center;gap:8px;margin:0 0 8px;color:color-mix(in srgb,var(--tone) 72%,#17243a);font-size:13px;font-weight:800}
+.cluster-head i{width:7px;height:7px;border-radius:50%;background:var(--tone);box-shadow:0 0 0 4px color-mix(in srgb,var(--tone) 14%,white)}
+.metric-grid{display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));gap:8px}
+/* 第一行：AI 重点卡略宽 */
+.metric-grid.level{grid-template-columns:1.3fr 1fr}
+
+/* ── 纯数据卡片（方案D增强版） ── */
+.dcard{
+  --tone:var(--miss);
+  position:relative;display:flex;flex-direction:column;min-width:0;
+  padding:12px 12px 10px;border:1px solid var(--line);border-left:4px solid var(--tone);
+  border-radius:11px;background:#fff;
+}
+.dcard.hit{--tone:var(--hit)}.dcard.near{--tone:var(--near)}.dcard.miss{--tone:var(--miss)}
+.dcard-head{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:8px}
+.dcard-name{font-size:13px;font-weight:700;line-height:1.3}
+.dcard-tag{flex:none;padding:2px 7px;border-radius:9px;font-size:9.5px;font-weight:800;
+  color:var(--tone);background:color-mix(in srgb,var(--tone) 9%,white)}
+/* 主数字行：固定高度+底部对齐，保证所有卡片达成率底缘与分割线距离一致；
+   margin-top:auto 与 meta 的 margin-top:auto 均分空余，数字区纵向居中 */
+.dcard-value{display:flex;align-items:flex-end;gap:5px;margin:auto 0 10px;min-height:56px}
+.dcard-value .v-col{display:flex;flex-direction:column;justify-content:flex-end;gap:3px;min-width:0}
+.dcard-value .v-main{display:flex;align-items:flex-end;gap:5px}
+.dcard-value .v-sub{font-size:10px;color:var(--muted);letter-spacing:.3px;white-space:nowrap}
+.dcard-value .v-sub-empty{visibility:hidden}
+.dcard-value b{font-size:42px;font-weight:900;line-height:1;color:var(--ink);letter-spacing:-.5px}
+.dcard-value .unit{font-size:16px;font-weight:700;color:var(--muted)}
+.dcard-value .rate{
+  margin-left:auto;text-align:right;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:4px 10px 5px;border:1px solid color-mix(in srgb,var(--tone) 38%,#e2e8f0);border-radius:8px;
+  background:color-mix(in srgb,var(--tone) 5%,white);
+}
+.dcard-value .rate span{order:-1;font-size:9.5px;color:var(--muted);margin-bottom:1px}
+.dcard-value .rate b{display:block;font-size:18px;font-weight:900;color:var(--tone);line-height:1.05}
+.dcard-value .rate .rate-target{order:1;margin-top:2px;padding-top:2px;border-top:1px dashed color-mix(in srgb,var(--tone) 30%,#e2e8f0);font-size:10px;color:var(--muted)}
+/* 底部对比条：上周值 + 环比胶囊 */
+.dcard-meta{display:flex;justify-content:space-between;align-items:flex-end;gap:6px;margin-top:auto;padding-top:8px;border-top:1px solid #edf1f5}
+.dcard-meta .prev{font-size:9.5px;color:var(--muted)}
+.dcard-meta .prev b{display:block;margin-top:2px;font-size:13px;font-weight:800;color:#3b4a63}
+.delta-pill{flex:none;padding:3px 9px;border-radius:9px;font-size:11px;font-weight:800;letter-spacing:.3px}
+.delta-pill.up{color:var(--hit);background:color-mix(in srgb,var(--hit) 10%,white)}
+.delta-pill.down{color:var(--miss);background:color-mix(in srgb,var(--miss) 10%,white)}
+.delta-pill.flat{color:var(--muted);background:#f1f5f9}
+/* 核心指标（AI时长接管率 着重强调） */
+.dcard.primary{
+  border:2px solid var(--blue);border-left-width:5px;
+  background:linear-gradient(180deg,#eef5ff,#fff 55%);
+  box-shadow:0 10px 24px #2563eb24;
+}
+.dcard.primary .core-chip{
+  flex:none;padding:2px 7px;border-radius:9px;background:var(--blue);color:#fff;
+  font-size:9.5px;font-weight:800;letter-spacing:1px;
+}
+.dcard.primary .dcard-name{color:#174ea6;font-size:15px}
+.dcard.primary .dcard-value b{font-size:52px;color:#174ea6}
+.dcard.primary .dcard-value .rate b{font-size:24px}
+.dcard.primary .dcard-meta .prev b{font-size:14px}
+
+/* ── 三模块 ── */
+.modules{display:grid;grid-template-columns:minmax(300px,.68fr) minmax(0,1.32fr);grid-template-rows:1fr 1fr;gap:12px;margin-top:16px}
+.module{min-height:0;padding:15px;border:1px solid var(--line);border-radius:12px;background:#fbfcfe}
+.module.bi{grid-column:2;grid-row:1/3;min-height:340px}
+.module h3{margin:0 0 10px;font-size:13px}
+.editable{height:calc(100% - 26px);min-height:112px;padding:10px;border:1px dashed #cbd5e1;border-radius:8px;background:#fff;color:#526177;font-size:12px;line-height:1.7;outline:none}
+.editable:focus{border-color:var(--blue);box-shadow:0 0 0 3px #2563eb12}
+.upload{position:relative;height:calc(100% - 26px);min-height:290px;border:1px dashed #aebbd0;border-radius:9px;background:#fff;display:grid;place-items:center;overflow:auto;cursor:pointer}
+.upload input{display:none}
+.upload span{text-align:center;color:var(--muted);font-size:12px}
+.upload img{display:none;width:100%;height:auto}
+.upload.has-image img{display:block}
+.upload.has-image span{display:none}
+
+.footnote{margin-top:14px;color:var(--muted);font-size:11px}
+
+@media(max-width:1180px){.metric-row.row1,.metric-row.row2{grid-template-columns:1fr}.metric-grid.level{grid-template-columns:repeat(2,1fr)}.modules{grid-template-columns:minmax(270px,.8fr) minmax(0,1.2fr)}}
+@media(max-width:760px){.metric-grid{grid-template-columns:repeat(2,1fr)!important}.modules{grid-template-columns:1fr;grid-template-rows:auto}.module.bi{grid-column:auto;grid-row:auto}.editable{height:auto}.upload{height:auto}.top{display:block}.source{display:inline-block}.station-head{align-items:flex-start;flex-wrap:wrap}.station-score{margin-left:auto}}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="top">
+    <div>
+      <h1>各站点运营周报 · 纯数据卡片版</h1>
+      <p>2026年第29周｜07.13 — 07.19｜104、嘉兴两个站点</p>
+    </div>
+    <div>
+      <div class="legend"><span><i style="background:var(--hit)"></i>达标</span><span><i style="background:var(--near)"></i>距目标≤2个百分点</span><span><i style="background:var(--miss)"></i>未达标</span></div>
+      <div class="source">8项指标均使用上一周制定目标判定</div>
+    </div>
+  </header>
+  <div id="stations"></div>
+  <p class="footnote">数据口径：本项目已保存的“2026年第29周运营周报”中 siteDetails、siteTargets 与 siteCards。达成率 = 本周完成 ÷ 上周制定目标；颜色按现有周报规则自动判定。文本框可直接编辑，BI 截图仅在当前浏览器预览，不上传、不修改后端及原有周报功能。</p>
+</main>
+<script>
+const sites=[
+ {name:'104',stage:'2-车上接管生产',days:6,auto:639,manual:59,abnormal:9,metrics:{
+  opHours:['有效运营时间',51.4833,55,'h',27.1833],autoFeed:['累计上料数',698,650,'次',511],
+  aiRate:['AI时长接管率',91.7773,90,'%',79.0313],prodRate:['生产任务接管率',60.6667,80,'%',71.0383],
+  succRate:['任务成功率',98.6111,96,'%',97.5904],abnRec:['异常任务远程恢复率',44.4444,55,'%',50],
+  prodCov:['生产时长覆盖率',100,90,'%',100],
+  effRatio:['人效比',91.6514,90,'%',89.8971]},
+  manualText:'暂未提供。请在此填写手动接管及异常原因。',focusText:'暂未提供。请在此填写本周重点。'},
+ {name:'嘉兴',stage:'4-远程监管生产',days:7,auto:507,manual:110,abnormal:32,metrics:{
+  opHours:['有效运营时间',61.3,65,'h',24.5333],autoFeed:['累计上料数',617,550,'次',243],
+  aiRate:['AI时长接管率',66.2045,80,'%',79.7554],prodRate:['生产任务接管率',81.4189,90,'%',99.1769],
+  succRate:['任务成功率',94.0631,96,'%',97.1774],abnRec:['异常任务远程恢复率',87.5,80,'%',71.4286],
+  prodCov:['生产时长覆盖率',70.388,90,'%',100],
+  effRatio:['人效比',73.0874,80,'%',76.831]},
+  manualText:'暂未提供。请在此填写手动接管及异常原因。',focusText:'暂未提供。请在此填写本周重点。'}
+];
+const groups={
+  level:{title:'自动化水平',tone:'#0ea5e9',keys:['aiRate','prodRate']},
+  stability:{title:'稳定性',tone:'#16a34a',keys:['succRate','abnRec']},
+  scale:{title:'运营量级',tone:'#2563eb',keys:['opHours','autoFeed']},
+  coverage:{title:'生产覆盖',tone:'#d97706',keys:['prodCov']},
+  efficiency:{title:'自动化效率',tone:'#7c3aed',keys:['effRatio']}
+};
+const fmt=(v,u)=>u==='%'?v.toFixed(2):u==='h'?v.toFixed(1):Math.round(v);
+const unitText=u=>u==='%'?'%':u==='h'?' h':' 次';
+function dcard(key,m,s){
+  const [name,value,target,unit,prev]=m;
+  const rate=target?value/target*100:0;
+  const gap=unit==='%'?target-value:(target-value)/target*100;
+  const state=value>=target?'hit':gap<=2?'near':'miss';
+  const label=state==='hit'?'已达标':state==='near'?'接近目标':'未达标';
+  const d=value-prev,dc=d>0?'up':d<0?'down':'flat';
+  const dt=(d>0?'▲ +':d<0?'▼ -':'— ')+(unit==='%'?Math.abs(d).toFixed(2)+'%':unit==='h'?Math.abs(d).toFixed(1)+'h':Math.round(Math.abs(d))+'次');
+  const subs={
+    opHours:`运营天数：${s.days}天`,
+    autoFeed:`自动上料：${s.auto}次｜手动上料：${s.manual}次`,
+    abnRec:`自动化异常：${s.abnormal}次`
+  };
+  // 无小字但需与小字卡片数值底部对齐的指标：渲染占位空行
+  const emptySub=['prodRate','succRate','prodCov','effRatio'];
+  const subHtml=subs[key]?`<div class="v-sub">${subs[key]}</div>`:emptySub.includes(key)?'<div class="v-sub v-sub-empty">&nbsp;</div>':'';
+  const primary=key==='aiRate';
+  return `<div class="dcard num ${state}${primary?' primary':''}">
+    <div class="dcard-head">${primary?'<span class="core-chip">核心指标</span>':''}<span class="dcard-name">${name}</span><span class="dcard-tag">${label}</span></div>
+    <div class="dcard-value"><div class="v-col"><div class="v-main"><b>${fmt(value,unit)}</b><span class="unit">${unitText(unit)}</span></div>${subHtml}</div>
+      <div class="rate"><b>${rate.toFixed(1)}%</b><span>达成率</span><span class="rate-target">÷ 目标 ${fmt(target,unit)}${unitText(unit)}</span></div></div>
+    <div class="dcard-meta">
+      <div class="prev">上周<b>${fmt(prev,unit)}${unitText(unit)}</b></div>
+      <span class="delta-pill ${dc}">环比 ${dt}</span>
+    </div></div>`;
+}
+function render(){
+  document.querySelector('#stations').innerHTML=sites.map((s,si)=>{
+    const vals=Object.values(s.metrics),hit=vals.filter(x=>x[1]>=x[2]).length;
+    const cluster=(g,gridClass='')=>`<div class="row-cluster" style="--tone:${g.tone}">
+      <h3 class="cluster-head"><i></i>${g.title}</h3>
+      <div class="metric-grid ${gridClass}" style="--cols:${g.keys.length}">${g.keys.map(k=>dcard(k,s.metrics[k],s)).join('')}</div>
+    </div>`;
+    const rows=`<div class="metric-rows">
+      <div class="metric-row row1">${cluster(groups.level,'level')}${cluster(groups.stability)}</div>
+      <div class="metric-row row2">${cluster(groups.scale)}${cluster(groups.coverage)}${cluster(groups.efficiency)}</div>
+    </div>`;
+    return `<section class="station">
+      <header class="station-head">
+        <div class="station-title"><span class="station-name">${s.name}站周报</span><span class="stage">${s.stage}</span><span class="week-range num">2026年第29周｜07.13 — 07.19</span></div>
+        <div class="station-score num"><b>${hit}<small style="font-size:13px;opacity:.7"> / ${vals.length}</small></b><span>目标指标达标</span></div>
+      </header>
+      <div class="station-body">
+        ${rows}
+        <div class="modules">
+          <section class="module"><h3>手动接管及异常原因</h3><div class="editable" contenteditable="true">${s.manualText}</div></section>
+          <section class="module"><h3>本周重点</h3><div class="editable" contenteditable="true">${s.focusText}</div></section>
+          <section class="module bi"><h3>BI 数据看板</h3>
+            <label class="upload" id="upload-${si}"><input type="file" accept="image/*" onchange="previewImage(event,${si})">
+            <span>点击选择或拖入 BI 截图<br>仅用于本页预览</span><img alt="${s.name}站 BI 截图"></label>
+          </section>
+        </div>
+      </div>
+    </section>`;
+  }).join('');
+}
+function previewImage(e,i){const f=e.target.files[0];if(!f)return;const box=document.querySelector('#upload-'+i),img=box.querySelector('img');img.src=URL.createObjectURL(f);box.classList.add('has-image')}
+render();
+</script>
+</body>
+</html>

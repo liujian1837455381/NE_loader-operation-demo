@@ -1,0 +1,383 @@
+/* ═══ 运营日历 —— 周视图样式（复用项目 CSS 变量体系，不引入新色板） ═══ */
+
+/* ── 工具栏 ── */
+.wk-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.wk-nav-btn {
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--border);
+  background: var(--card-bg2);
+  color: var(--t2);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color .18s, border-color .18s;
+}
+.wk-nav-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.wk-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--t1);
+  min-width: 168px;
+  text-align: center;
+}
+
+.wk-range {
+  font-size: 12px;
+  color: var(--t3);
+  font-variant-numeric: tabular-nums;
+}
+
+.wk-today-btn {
+  margin-left: 4px;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  background: var(--card-bg2);
+  color: var(--t2);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: inherit;
+  transition: color .18s, border-color .18s;
+}
+.wk-today-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ── 站点筛选下拉 ── */
+.wk-filter {
+  position: relative;
+  margin-left: auto;
+}
+
+.wk-filter-btn {
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  background: var(--card-bg2);
+  color: var(--t2);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: inherit;
+  transition: color .18s, border-color .18s;
+}
+.wk-filter-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.wk-filter-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 60;
+  width: 190px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .32);
+  overflow: hidden;
+}
+
+.wk-filter-acts {
+  display: flex;
+  gap: 4px;
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.wk-filter-list {
+  max-height: 260px;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+.wk-filter-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--t2);
+  user-select: none;
+}
+.wk-filter-item:hover { background: var(--card-bg2); }
+.wk-filter-item input { width: 14px; height: 14px; cursor: pointer; flex: 0 0 auto; }
+.wk-filter-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.wk-filter-empty {
+  padding: 14px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--t3);
+}
+
+/* ── 图例 ── */
+.wk-legend {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.wk-lg {
+  font-size: 11px;
+  color: var(--t3);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.wk-lg::before {
+  content: '';
+  width: 3px;
+  height: 11px;
+  border-radius: 1px;
+  display: inline-block;
+}
+.wk-lg-prod::before   { background: #22c55e; }
+.wk-lg-noprod::before { background: var(--accent); }
+.wk-lg-noop::before   { background: var(--t3); }
+
+/* ── 网格 ── */
+.wk-grid-wrap {
+  overflow: auto;
+  max-height: calc(100vh - 300px);
+}
+
+.wk-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
+  table-layout: fixed;
+}
+
+/* 表头（纵向滚动时吸顶） */
+.wk-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--card-bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 6px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.wk-th-station {
+  left: 0;
+  z-index: 30 !important;
+  width: 116px;
+  text-align: left !important;
+  padding-left: 14px !important;
+  font-size: 12px;
+  color: var(--t2);
+  border-right: 1px solid var(--border);
+}
+/* sticky 需要写在同一条规则里才能同时吸顶 + 吸左 */
+.wk-table thead .wk-th-station { position: sticky; top: 0; left: 0; }
+
+.wk-th-day {
+  text-align: center;
+  display: table-cell;
+}
+.wk-th-dow {
+  display: block;
+  font-size: 12px;
+  color: var(--t2);
+}
+.wk-th-date {
+  display: block;
+  font-size: 11px;
+  color: var(--t3);
+  margin-top: 1px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 站点列（横向滚动时吸左） */
+.wk-td-station {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  background: var(--card-bg);
+  width: 116px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--t1);
+  padding: 0 10px 0 14px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.wk-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 6px;
+  flex: 0 0 auto;
+  vertical-align: middle;
+}
+
+.wk-station-name {
+  display: inline-block;
+  max-width: 82px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* ── 单元格 ── */
+.wk-cell {
+  height: 54px;
+  padding: 0;
+  border-bottom: 1px solid var(--border);
+  border-left: 3px solid transparent;   /* 状态色编码 */
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background .15s;
+  vertical-align: top;
+}
+.wk-cell:hover { background: rgba(245, 166, 35, .07) !important; }
+
+/* 运营 · 有生产 */
+.wk-prod {
+  border-left-color: #22c55e;
+  background: rgba(34, 197, 94, .06);
+}
+/* 运营 · 无生产 */
+.wk-noprod {
+  border-left-color: var(--accent);
+  background: var(--accent-dim);
+}
+/* 未运营 */
+.wk-noop {
+  border-left-color: var(--t3);
+}
+/* 无记录 */
+.wk-blank {
+  border-left-color: transparent;
+}
+
+/* ── 格子内部：左标签 + 右数据 ── */
+.wk-cell-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  height: 100%;
+  padding: 5px 7px 5px 5px;
+}
+
+.wk-st-badge {
+  flex: 0 0 auto;
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  margin-top: 1px;
+}
+.wk-badge-prod   { background: rgba(34,197,94,.15);  color: #22c55e; }
+.wk-badge-noprod { background: var(--accent-dim);     color: var(--accent); }
+.wk-badge-noop   { background: rgba(255,255,255,.06); color: var(--t3); border: 1px solid var(--border); }
+
+.wk-data {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wk-hours {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--t1);
+  line-height: 1.25;
+  font-variant-numeric: tabular-nums;
+}
+
+.wk-feed {
+  font-size: 10.5px;
+  color: var(--t3);
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+}
+
+.wk-noprod .wk-hours { color: var(--t2); }
+
+.wk-reason {
+  font-size: 11.5px;
+  color: var(--t3);
+  line-height: 1.35;
+  /* 最多两行，超出截断；完整内容走原生 title */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.wk-dash {
+  color: var(--t3);
+  font-size: 13px;
+  opacity: .5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* 今天所在列 */
+.wk-th-day.wk-today {
+  color: var(--accent);
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+.wk-th-day.wk-today .wk-th-dow,
+.wk-th-day.wk-today .wk-th-date { color: var(--accent); }
+
+.wk-cell.wk-today { background-image: linear-gradient(rgba(245, 166, 35, .05), rgba(245, 166, 35, .05)); }
+
+.wk-empty {
+  padding: 48px;
+  text-align: center;
+  color: var(--t3);
+  font-size: 13px;
+}
+
+/* ── 亮色主题微调 ── */
+[data-theme="light"] .wk-filter-panel { box-shadow: 0 8px 24px rgba(0, 0, 0, .12); }
+[data-theme="light"] .wk-prod { background: rgba(34, 197, 94, .09); }
+[data-theme="light"] .wk-cell:hover { background: rgba(255, 149, 0, .08) !important; }
+[data-theme="light"] .wk-cell.wk-today { background-image: linear-gradient(rgba(255, 149, 0, .06), rgba(255, 149, 0, .06)); }
+
+/* ── 窄屏 ── */
+@media (max-width: 1200px) {
+  .wk-th-station, .wk-td-station { width: 92px; }
+  .wk-station-name { max-width: 60px; }
+  .wk-legend { display: none; }
+}

@@ -1,0 +1,53 @@
+/* ============================================================================
+ * metric-glossary · 作用域样式（仅 .gl-* / #ovGlossary，避免污染主项目）
+ * 颜色全部复用主项目 CSS 变量：--t1/--t2/--t3/--accent/--border/--card-bg/--card-bg2
+ * ========================================================================== */
+
+#ovGlossary .modal-head-title { display: flex; align-items: center; gap: 6px; }
+
+.gl-intro {
+  font-size: 12px; color: var(--t2); line-height: 1.7;
+  margin-bottom: 16px; padding: 10px 14px;
+  background: var(--card-bg2); border: 1px solid var(--border); border-radius: 6px;
+}
+
+.gl-sec { margin-bottom: 18px; }
+.gl-sec-title {
+  font-size: 12.5px; font-weight: 700; color: var(--accent);
+  letter-spacing: .5px; margin-bottom: 10px; text-transform: uppercase;
+  border-left: 3px solid var(--accent); padding-left: 8px;
+}
+
+.gl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.gl-term {
+  background: var(--card-bg2); border: 1px solid var(--border);
+  border-radius: 6px; padding: 10px 12px;
+}
+.gl-term-name { font-size: 12.5px; font-weight: 700; color: var(--t1); margin-bottom: 6px; }
+.gl-row { font-size: 11px; line-height: 1.65; color: var(--t2); margin-bottom: 3px; }
+.gl-row:last-child { margin-bottom: 0; }
+.gl-row b { color: var(--t3); font-weight: 600; }
+
+/* 底部灰色区，仿照卡片底部「问题记录汇总」(.takeover-issues)，左右出血到弹窗边缘 */
+.gl-legend {
+  margin: 16px -22px -20px; padding: 14px 22px;
+  background: var(--card-bg2); border-top: 1px solid var(--border);
+}
+.gl-legend-title {
+  font-size: 12.5px; font-weight: 600; color: var(--accent);
+  margin-bottom: 10px; display: flex; align-items: center; gap: 6px;
+}
+.gl-table { width: 100%; font-size: 11px; border-collapse: collapse; }
+.gl-table th {
+  padding: 8px 10px; text-align: left; color: var(--t2); font-weight: 600;
+  background: var(--card-bg); border-bottom: 1px solid var(--border);
+}
+.gl-table td {
+  padding: 8px 10px; color: var(--t2); border-bottom: 1px solid var(--border);
+  vertical-align: top; line-height: 1.5;
+}
+.gl-table tr:last-child td { border-bottom: none; }
+.gl-lg-code { color: var(--accent); font-weight: 700; white-space: nowrap; }
+
+@media (max-width: 680px) { .gl-grid { grid-template-columns: 1fr; } }
