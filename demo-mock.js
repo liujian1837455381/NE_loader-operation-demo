@@ -3,11 +3,11 @@
   const DEMO_VERSION = 'demo-monitor-v3';
   const REFRESH_MS = 90_000;
   const SITE_DEFS = [
-    { id: 1, name: '104', stage: 2, manualEfficiency: 98, monitor_production: true, monitor_loader_state: true },
-    { id: 2, name: '嘉兴', stage: 4, manualEfficiency: 96, monitor_production: true, monitor_loader_state: true },
-    { id: 3, name: '舟山电厂', stage: 2, manualEfficiency: 30, monitor_production: true, monitor_loader_state: true },
-    { id: 4, name: '宜涪', stage: 5, manualEfficiency: 90, monitor_production: false, monitor_loader_state: false },
-    { id: 5, name: '长赣', stage: 5, manualEfficiency: 100, monitor_production: false, monitor_loader_state: false }
+    { id: 1, name: '站点A', stage: 2, manualEfficiency: 98, monitor_production: true, monitor_loader_state: true },
+    { id: 2, name: '站点B', stage: 4, manualEfficiency: 96, monitor_production: true, monitor_loader_state: true },
+    { id: 3, name: '站点E', stage: 2, manualEfficiency: 30, monitor_production: true, monitor_loader_state: true },
+    { id: 4, name: '站点C', stage: 5, manualEfficiency: 90, monitor_production: false, monitor_loader_state: false },
+    { id: 5, name: '站点D', stage: 5, manualEfficiency: 100, monitor_production: false, monitor_loader_state: false }
   ].map(site => ({
     ...site,
     api: '',
