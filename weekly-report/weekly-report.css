@@ -93,7 +93,7 @@
     /* 底部三模块：左侧两文本框纵向排列，右侧数据看板通高（样板占比） */
     .sc-mods { display:grid; grid-template-columns:minmax(280px,.68fr) minmax(0,1.32fr); grid-template-rows:1fr 1fr; gap:12px; margin-top:12px; }
     .sc-mod { min-width:0; display:flex; flex-direction:column; padding:12px 13px; border:1px solid var(--border); border-radius:10px; background:var(--card-bg2); }
-    .sc-mod-bi { grid-column:2; grid-row:1/3; }
+    .sc-mod-panel { grid-column:2; grid-row:1/3; }
     .sc-mod-head { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:7px; }
     .sc-mod-t { font-size:12px; font-weight:700; color:var(--t2); }
     .sc-text { flex:1; min-height:96px; max-height:220px; overflow:auto; background:var(--card-bg); border:1px dashed var(--border); border-radius:7px; padding:8px 10px; font-size:12px; color:var(--t1); line-height:1.7; outline:none; white-space:pre-wrap; word-break:break-word; }
@@ -103,4 +103,4 @@
     .sc-image:empty:before { content:'点击聚焦后 Ctrl+V 粘贴数据看板截图'; color:var(--t3); font-size:12px; -webkit-user-select:none; user-select:none; }
     .sc-image:focus { border-color:var(--accent); }
     .sc-image img { max-width:100%; border-radius:6px; display:block; }
-    @media(max-width:1100px){ .sc-row.r1, .sc-row.r2 { grid-template-columns:1fr; } .sc-metrics.level { grid-template-columns:repeat(2,1fr); } .sc-mods { grid-template-columns:1fr; grid-template-rows:auto; } .sc-mod-bi { grid-column:auto; grid-row:auto; } }
+    @media(max-width:1100px){ .sc-row.r1, .sc-row.r2 { grid-template-columns:1fr; } .sc-metrics.level { grid-template-columns:repeat(2,1fr); } .sc-mods { grid-template-columns:1fr; grid-template-rows:auto; } .sc-mod-panel { grid-column:auto; grid-row:auto; } }

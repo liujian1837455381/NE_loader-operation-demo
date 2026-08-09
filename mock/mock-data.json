@@ -1,6 +1,6 @@
 [
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-01",
     "totalOpTime": "400",
     "autoFeedTotal": "101",
@@ -24,7 +24,7 @@
     "id": 1782961703633
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-01",
     "totalOpTime": "459",
     "autoFeedTotal": "150",
@@ -69,12 +69,12 @@
     "id": 1782961754873
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-01",
     "totalOpTime": "688",
     "autoFeedTotal": "107",
     "testTaskCount": "3",
-    "autoProdFeed": "104",
+    "autoProdFeed": "演示站A",
     "manualFeed": "7",
     "abnormalTask": "0",
     "autoWorkDuration": "576",
@@ -93,7 +93,7 @@
     "id": 1782961778665
   },
   {
-    "station": "甘肃路桥",
+    "station": "演示站H",
     "date": "2026-07-01",
     "totalOpTime": "641",
     "autoFeedTotal": "6",
@@ -138,7 +138,7 @@
     "id": 1782961801073
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-01",
     "totalOpTime": "250",
     "autoFeedTotal": "70",
@@ -162,7 +162,7 @@
     "id": 1782973656296
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-02",
     "totalOpTime": "511",
     "autoFeedTotal": "122",
@@ -217,7 +217,7 @@
     "id": 1783044420875
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-02",
     "totalOpTime": "830",
     "autoFeedTotal": "168",
@@ -241,7 +241,7 @@
     "id": 1783044466878
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-02",
     "totalOpTime": "120",
     "autoFeedTotal": "62",
@@ -276,7 +276,7 @@
     "id": 1783044542473
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-02",
     "totalOpTime": "633",
     "autoFeedTotal": "83",
@@ -351,7 +351,7 @@
     "id": 1783051457167
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-03",
     "totalOpTime": "464",
     "autoFeedTotal": "135",
@@ -386,7 +386,7 @@
     "id": 1783306208916
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-05",
     "totalOpTime": "380",
     "autoFeedTotal": "129",
@@ -441,7 +441,7 @@
     "id": 1783306223429
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-04",
     "totalOpTime": "900",
     "autoFeedTotal": "67",
@@ -476,7 +476,7 @@
     "id": 1783306342342
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-03",
     "totalOpTime": "657",
     "autoFeedTotal": "76",
@@ -531,7 +531,7 @@
     "id": 1783306534743
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-04",
     "totalOpTime": "717",
     "autoFeedTotal": "107",
@@ -576,7 +576,7 @@
     "id": 1783306894912
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-03",
     "totalOpTime": "410",
     "autoFeedTotal": "79",
@@ -611,7 +611,7 @@
     "id": 1783307579748
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-03",
     "totalOpTime": "510",
     "autoFeedTotal": "149",
@@ -635,7 +635,7 @@
     "id": 1783308130713
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-06",
     "totalOpTime": "684",
     "autoFeedTotal": "98",
@@ -700,7 +700,7 @@
     "id": 1783409815528
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-06",
     "totalOpTime": "520",
     "autoFeedTotal": "94",
@@ -722,7 +722,7 @@
     "issues": [
       {
         "category": "系统故障",
-        "reason": "出现故障（长安重工排查中，本体丹佛斯阀数值跳变）",
+        "reason": "出现故障（示例设备厂商排查中，本体示例液压组件阀数值跳变）",
         "faultType": "本体故障",
         "takeoverDuration": 6,
         "manualFeedCount": 0,
@@ -735,7 +735,7 @@
     "id": 1783409833073
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-07",
     "totalOpTime": "215",
     "autoFeedTotal": "76",
@@ -780,7 +780,7 @@
     "id": 1783477664260
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-07",
     "totalOpTime": "686",
     "autoFeedTotal": "90",
@@ -835,7 +835,7 @@
     "id": 1783477702003
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-07",
     "totalOpTime": "360",
     "autoFeedTotal": "46",
@@ -857,7 +857,7 @@
     "issues": [
       {
         "category": "系统故障",
-        "reason": "发任务，车不动 （丹佛斯，本体故障，具体原因未知）",
+        "reason": "发任务，车不动 （示例液压组件，本体故障，具体原因未知）",
         "faultType": "本体故障",
         "takeoverDuration": 17,
         "manualFeedCount": 0,
@@ -900,7 +900,7 @@
     "id": 1783477720662
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-07",
     "totalOpTime": "618",
     "autoFeedTotal": "83",
@@ -965,7 +965,7 @@
     "id": 1783566140459
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-06",
     "totalOpTime": "502",
     "autoFeedTotal": "116",
@@ -1080,7 +1080,7 @@
     "id": 1783566177899
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-08",
     "totalOpTime": "450",
     "autoFeedTotal": "111",
@@ -1125,7 +1125,7 @@
     "id": 1783566958198
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-08",
     "totalOpTime": "630",
     "autoFeedTotal": "112",
@@ -1149,7 +1149,7 @@
     "id": 1783566988878
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-08",
     "totalOpTime": "672",
     "autoFeedTotal": "99",
@@ -1194,7 +1194,7 @@
     "id": 1783567003774
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-08",
     "totalOpTime": "350",
     "autoFeedTotal": "79",
@@ -1229,7 +1229,7 @@
     "id": 1783567021486
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-09",
     "totalOpTime": "364",
     "autoFeedTotal": "77",
@@ -1324,7 +1324,7 @@
     "id": 1783653540494
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-09",
     "totalOpTime": "684",
     "autoFeedTotal": "91",
@@ -1379,7 +1379,7 @@
     "id": 1783653600703
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-09",
     "totalOpTime": "480",
     "autoFeedTotal": "93",
@@ -1401,7 +1401,7 @@
     "issues": [
       {
         "category": "系统故障",
-        "reason": "提示装载机故障暂停作业（长安重工排查中）",
+        "reason": "提示装载机故障暂停作业（示例设备厂商排查中）",
         "faultType": "本体故障",
         "takeoverDuration": 60,
         "manualFeedCount": 0,
@@ -1424,7 +1424,7 @@
     "id": 1783653635749
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-09",
     "totalOpTime": "224",
     "autoFeedTotal": "46",
@@ -1469,7 +1469,7 @@
     "id": 1783653707822
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-10",
     "totalOpTime": "100",
     "autoFeedTotal": "25",
@@ -1504,7 +1504,7 @@
     "id": 1783911327791
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-10",
     "totalOpTime": "270",
     "autoFeedTotal": "55",
@@ -1528,7 +1528,7 @@
     "id": 1783911373303
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-10",
     "totalOpTime": "762",
     "autoFeedTotal": "37",
@@ -1583,7 +1583,7 @@
     "id": 1783911388207
   },
   {
-    "station": "宜涪",
+    "station": "演示站C",
     "date": "2026-07-09",
     "totalOpTime": "118.42",
     "autoFeedTotal": "26",
@@ -1607,7 +1607,7 @@
     "id": 1783915329086
   },
   {
-    "station": "宜涪",
+    "station": "演示站C",
     "date": "2026-07-11",
     "totalOpTime": "84.78",
     "autoFeedTotal": "17",
@@ -1631,7 +1631,7 @@
     "id": 1783915409385
   },
   {
-    "station": "宜涪",
+    "station": "演示站C",
     "date": "2026-07-12",
     "totalOpTime": "24.34",
     "autoFeedTotal": "4",
@@ -1655,7 +1655,7 @@
     "id": 1783915455249
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-13",
     "totalOpTime": "567",
     "autoFeedTotal": "118",
@@ -1710,7 +1710,7 @@
     "id": 1784080268693
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-13",
     "totalOpTime": "521",
     "autoFeedTotal": "34",
@@ -1732,7 +1732,7 @@
     "issues": [
       {
         "category": "问题调试",
-        "reason": "剑鸿调试铲斗缷料的问题",
+        "reason": "技术人员调试铲斗缷料的问题",
         "faultType": "",
         "takeoverDuration": 176,
         "manualFeedCount": 0,
@@ -1775,7 +1775,7 @@
     "id": 1784080329853
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-13",
     "totalOpTime": "420",
     "autoFeedTotal": "85",
@@ -1820,7 +1820,7 @@
     "id": 1784080410484
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-14",
     "totalOpTime": "623",
     "autoFeedTotal": "54",
@@ -1855,7 +1855,7 @@
     "id": 1784081996683
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-14",
     "totalOpTime": "610",
     "autoFeedTotal": "99",
@@ -1890,7 +1890,7 @@
     "id": 1784082013605
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-14",
     "totalOpTime": "685",
     "autoFeedTotal": "89",
@@ -1945,7 +1945,7 @@
     "id": 1784082031201
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-14",
     "totalOpTime": "430",
     "autoFeedTotal": "97",
@@ -1969,7 +1969,7 @@
     "id": 1784082160465
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-15",
     "totalOpTime": "549",
     "autoFeedTotal": "75",
@@ -2014,7 +2014,7 @@
     "id": 1784180470938
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-15",
     "totalOpTime": "664",
     "autoFeedTotal": "99",
@@ -2059,7 +2059,7 @@
     "id": 1784180490267
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-15",
     "totalOpTime": "480",
     "autoFeedTotal": "95",
@@ -2094,7 +2094,7 @@
     "id": 1784180545380
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-13",
     "totalOpTime": "461",
     "autoFeedTotal": "28",
@@ -2149,7 +2149,7 @@
     "id": 1784186475772
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-16",
     "totalOpTime": "688",
     "autoFeedTotal": "81",
@@ -2184,7 +2184,7 @@
     "id": 1784257525926
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-16",
     "totalOpTime": "686",
     "autoFeedTotal": "125",
@@ -2229,7 +2229,7 @@
     "id": 1784257547670
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-16",
     "totalOpTime": "675",
     "autoFeedTotal": "34",
@@ -2264,7 +2264,7 @@
     "id": 1784257801048
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-17",
     "totalOpTime": "483",
     "autoFeedTotal": "115",
@@ -2309,7 +2309,7 @@
     "id": 1784526851755
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-18",
     "totalOpTime": "485",
     "autoFeedTotal": "205",
@@ -2364,7 +2364,7 @@
     "id": 1784526869482
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-17",
     "totalOpTime": "690",
     "autoFeedTotal": "69",
@@ -2386,7 +2386,7 @@
     "issues": [
       {
         "category": "问题调试",
-        "reason": "剑鸿调试3号线缷料问题",
+        "reason": "技术人员调试3号线缷料问题",
         "faultType": "",
         "takeoverDuration": 60,
         "manualFeedCount": 0,
@@ -2419,7 +2419,7 @@
     "id": 1784526912658
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-18",
     "totalOpTime": "350",
     "autoFeedTotal": "113",
@@ -2454,7 +2454,7 @@
     "id": 1784526929346
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-19",
     "totalOpTime": "270",
     "autoFeedTotal": "36",
@@ -2489,7 +2489,7 @@
     "id": 1784526952483
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-17",
     "totalOpTime": "721",
     "autoFeedTotal": "140",
@@ -2544,7 +2544,7 @@
     "id": 1784527045610
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-19",
     "totalOpTime": "666",
     "autoFeedTotal": "183",
@@ -2609,7 +2609,7 @@
     "id": 1784527073586
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-17",
     "totalOpTime": "540",
     "autoFeedTotal": "23",
@@ -2631,7 +2631,7 @@
     "issues": [
       {
         "category": "系统故障",
-        "reason": "PDU 故障   等长安重工来处理",
+        "reason": "PDU 故障   等示例设备厂商来处理",
         "faultType": "本体故障",
         "takeoverDuration": 240,
         "manualFeedCount": 0,
@@ -2654,7 +2654,7 @@
     "id": 1784527140330
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-19",
     "totalOpTime": "256",
     "autoFeedTotal": "113",
@@ -2689,7 +2689,7 @@
     "id": 1784527894973
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-16",
     "totalOpTime": "450",
     "autoFeedTotal": "86",
@@ -2721,7 +2721,7 @@
       },
       {
         "category": "系统故障",
-        "reason": "配合长安重工检查充满电报故障问题",
+        "reason": "配合示例设备厂商检查充满电报故障问题",
         "faultType": "本体故障",
         "takeoverDuration": 30,
         "manualFeedCount": 0,
@@ -2731,7 +2731,7 @@
       },
       {
         "category": "系统故障",
-        "reason": "配合长安重工检查充电 100 报故障问题",
+        "reason": "配合示例设备厂商检查充电 100 报故障问题",
         "faultType": "本体故障",
         "takeoverDuration": 60,
         "manualFeedCount": 0,
@@ -2744,7 +2744,7 @@
     "id": 1784530557575
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-20",
     "totalOpTime": "391",
     "autoFeedTotal": "94",
@@ -2789,7 +2789,7 @@
     "id": 1784600635857
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-20",
     "totalOpTime": "676",
     "autoFeedTotal": "46",
@@ -2834,7 +2834,7 @@
     "id": 1784600658904
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-20",
     "totalOpTime": "660",
     "autoFeedTotal": "156",
@@ -2879,7 +2879,7 @@
     "id": 1784600697241
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-20",
     "totalOpTime": "420",
     "autoFeedTotal": "89",
@@ -2903,7 +2903,7 @@
     "id": 1784600959224
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-21",
     "totalOpTime": "392",
     "autoFeedTotal": "33",
@@ -2927,7 +2927,7 @@
     "id": 1784687169691
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-21",
     "totalOpTime": "540",
     "autoFeedTotal": "12",
@@ -2949,7 +2949,7 @@
     "issues": [
       {
         "category": "系统故障",
-        "reason": "剑鸿排查后退急刹的问题（毫米波变形，后退刹车，后续更换）",
+        "reason": "技术人员排查后退急刹的问题（毫米波变形，后退刹车，后续更换）",
         "faultType": "传感器故障",
         "takeoverDuration": 40,
         "manualFeedCount": 0,
@@ -2959,7 +2959,7 @@
       },
       {
         "category": "系统故障",
-        "reason": "5号仓铲完料车机故障车子不动（下位机故障，长安重工排查中）",
+        "reason": "5号仓铲完料车机故障车子不动（下位机故障，示例设备厂商排查中）",
         "faultType": "本体故障",
         "takeoverDuration": 2,
         "manualFeedCount": 0,
@@ -2969,7 +2969,7 @@
       },
       {
         "category": "操作失误",
-        "reason": "许占功排查巡检轨迹的问题（超出运营范围，激光定位失败，已反馈）",
+        "reason": "技术人员排查巡检轨迹的问题（超出运营范围，激光定位失败，已反馈）",
         "faultType": "",
         "takeoverDuration": 20,
         "manualFeedCount": 0,
@@ -2992,7 +2992,7 @@
     "id": 1784687193875
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-21",
     "totalOpTime": "682",
     "autoFeedTotal": "86",
@@ -3067,7 +3067,7 @@
     "id": 1784687222299
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-21",
     "totalOpTime": "390",
     "autoFeedTotal": "67",
@@ -3102,7 +3102,7 @@
     "id": 1784687245379
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-22",
     "totalOpTime": "394",
     "autoFeedTotal": "40",
@@ -3124,7 +3124,7 @@
     "issues": [
       {
         "category": "系统故障",
-        "reason": "四号斗任务在料斗上方报车机故障 任务异常切本地开回待机点后自行恢复（偶现，已联系徐工）",
+        "reason": "四号斗任务在料斗上方报车机故障 任务异常切本地开回待机点后自行恢复（偶现，已联系示例制造商）",
         "faultType": "本体故障",
         "takeoverDuration": 1,
         "manualFeedCount": 0,
@@ -3134,7 +3134,7 @@
       },
       {
         "category": "系统故障",
-        "reason": "待机点执行二号仓任务时车机闪现电池故障又自行恢复（偶现，已联系徐工）",
+        "reason": "待机点执行二号仓任务时车机闪现电池故障又自行恢复（偶现，已联系示例制造商）",
         "faultType": "本体故障",
         "takeoverDuration": 0,
         "manualFeedCount": 0,
@@ -3144,7 +3144,7 @@
       },
       {
         "category": "系统故障",
-        "reason": "二号仓任务在仓内车机显示电池故障卡主 任务异常持续三分钟左右自行恢复切本地开回待机点（偶现，已联系徐工）",
+        "reason": "二号仓任务在仓内车机显示电池故障卡主 任务异常持续三分钟左右自行恢复切本地开回待机点（偶现，已联系示例制造商）",
         "faultType": "本体故障",
         "takeoverDuration": 1,
         "manualFeedCount": 0,
@@ -3157,7 +3157,7 @@
     "id": 1784774067890
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-22",
     "totalOpTime": "300",
     "autoFeedTotal": "36",
@@ -3202,7 +3202,7 @@
     "id": 1784774090738
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-22",
     "totalOpTime": "682",
     "autoFeedTotal": "82",
@@ -3247,7 +3247,7 @@
     "id": 1784776529305
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-22",
     "totalOpTime": "450",
     "autoFeedTotal": "46",
@@ -3292,7 +3292,7 @@
     "id": 1784776552087
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-23",
     "totalOpTime": "258",
     "autoFeedTotal": "60",
@@ -3357,7 +3357,7 @@
     "id": 1784857525481
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-23",
     "totalOpTime": "685",
     "autoFeedTotal": "23",
@@ -3412,7 +3412,7 @@
     "id": 1784857548247
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-23",
     "totalOpTime": "677",
     "autoFeedTotal": "74",
@@ -3467,7 +3467,7 @@
     "id": 1784857571030
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-23",
     "totalOpTime": "480",
     "autoFeedTotal": "60",
@@ -3502,7 +3502,7 @@
     "id": 1784857593813
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-24",
     "totalOpTime": "469",
     "autoFeedTotal": "121",
@@ -3534,7 +3534,7 @@
       },
       {
         "category": "操作失误",
-        "reason": "待机点发五号仓任务显示初始姿态不对任务异常重新巡检后恢复（师傅停的不准导致）",
+        "reason": "待机点发五号仓任务显示初始姿态不对任务异常重新巡检后恢复（现场停车位置不准导致）",
         "faultType": "",
         "takeoverDuration": 0,
         "manualFeedCount": 0,
@@ -3554,7 +3554,7 @@
       },
       {
         "category": "系统故障",
-        "reason": "待机点执行五号仓任务时日志显示车机故障 但车机未显示故障点开始作业执行下一个任务（徐工本体故障）",
+        "reason": "待机点执行五号仓任务时日志显示车机故障 但车机未显示故障点开始作业执行下一个任务（示例制造商本体故障）",
         "faultType": "本体故障",
         "takeoverDuration": 0,
         "manualFeedCount": 0,
@@ -3587,7 +3587,7 @@
     "id": 1785122998604
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-24",
     "totalOpTime": "900",
     "autoFeedTotal": "60",
@@ -3632,7 +3632,7 @@
     "id": 1785123018084
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-24",
     "totalOpTime": "658",
     "autoFeedTotal": "78",
@@ -3677,7 +3677,7 @@
     "id": 1785123137344
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-24",
     "totalOpTime": "480",
     "autoFeedTotal": "85",
@@ -3722,7 +3722,7 @@
     "id": 1785123257394
   },
   {
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-27",
     "totalOpTime": "590",
     "autoFeedTotal": "114",
@@ -3817,7 +3817,7 @@
     "id": 1785206320016
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-27",
     "totalOpTime": "631",
     "autoFeedTotal": "164",
@@ -3862,7 +3862,7 @@
     "id": 1785206347239
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-27",
     "totalOpTime": "684",
     "autoFeedTotal": "81",
@@ -3917,7 +3917,7 @@
     "id": 1785206363400
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-27",
     "totalOpTime": "330",
     "autoFeedTotal": "70",
@@ -3952,7 +3952,7 @@
     "id": 1785206377239
   },
   {
-    "station": "嘉兴",
+    "station": "演示站B",
     "date": "2026-07-28",
     "totalOpTime": "540",
     "autoFeedTotal": "125",
@@ -3987,7 +3987,7 @@
     "id": 1785291851054
   },
   {
-    "station": "兴发",
+    "station": "演示站F",
     "date": "2026-07-28",
     "totalOpTime": "648",
     "autoFeedTotal": "76",
@@ -4032,7 +4032,7 @@
     "id": 1785291872254
   },
   {
-    "station": "波然",
+    "station": "演示站I",
     "date": "2026-07-28",
     "totalOpTime": "450",
     "autoFeedTotal": "80",
@@ -4078,7 +4078,7 @@
   },
   {
     "id": 1785700000001,
-    "station": "宜涪",
+    "station": "演示站C",
     "date": "2026-08-03",
     "noOp": true,
     "noOpReason": "设备年度检修，暂停运营",
@@ -4087,7 +4087,7 @@
   },
   {
     "id": 1785700000002,
-    "station": "甘肃路桥",
+    "station": "演示站H",
     "date": "2026-08-03",
     "noOp": true,
     "noOpReason": "站点网络中断，待运营商恢复",
@@ -4096,7 +4096,7 @@
   },
   {
     "id": 1785700000003,
-    "station": "104",
+    "station": "演示站A",
     "date": "2026-07-28",
     "noOp": true,
     "noOpReason": "装载区传感器故障，全天停机维修",

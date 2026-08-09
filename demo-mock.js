@@ -3,16 +3,16 @@
   const DEMO_VERSION = 'demo-monitor-v3';
   const REFRESH_MS = 90_000;
   const SITE_DEFS = [
-    { id: 1, name: '站点A', stage: 2, manualEfficiency: 98, monitor_production: true, monitor_loader_state: true },
-    { id: 2, name: '站点B', stage: 4, manualEfficiency: 96, monitor_production: true, monitor_loader_state: true },
-    { id: 3, name: '站点E', stage: 2, manualEfficiency: 30, monitor_production: true, monitor_loader_state: true },
-    { id: 4, name: '站点C', stage: 5, manualEfficiency: 90, monitor_production: false, monitor_loader_state: false },
-    { id: 5, name: '站点D', stage: 5, manualEfficiency: 100, monitor_production: false, monitor_loader_state: false }
+    { id: 1, name: '演示站A', stage: 2, manualEfficiency: 98, monitor_production: true, monitor_loader_state: true },
+    { id: 2, name: '演示站B', stage: 4, manualEfficiency: 96, monitor_production: true, monitor_loader_state: true },
+    { id: 3, name: '演示站E', stage: 2, manualEfficiency: 30, monitor_production: true, monitor_loader_state: true },
+    { id: 4, name: '演示站C', stage: 5, manualEfficiency: 90, monitor_production: false, monitor_loader_state: false },
+    { id: 5, name: '演示站D', stage: 5, manualEfficiency: 100, monitor_production: false, monitor_loader_state: false }
   ].map(site => ({
     ...site,
     api: '',
-    project_id: site.id,
-    token: '',
+    demo_site_id: site.id,
+    accessNote: '',
     sheet_mode: 'simple'
   }));
 
@@ -285,18 +285,18 @@
     };
   }
 
-  const REPORT_STATIONS = ['104', '嘉兴', '兴发', '波然'];
+  const REPORT_STATIONS = ['演示站A', '演示站B', '演示站F', '演示站I'];
   const REPORT_TEMPLATE_TEXT = {
-    analysis: `1.运营概况：本周共运营4个站点，分别为104、嘉兴、兴发、波然。上周生产任务接管率、异常任务远程恢复率、自动化生产方量覆盖率均达标且提升明显；任务成功率和生产时长覆盖率保持在高位稳定；但是由于104站电控箱改造升级停运，导致整体运营时长有所下降。甘肃路桥站上周调试遗留故障问题，并无实际生产，故不计入运营。
-2.总运营时间：177.5h，同比增加1.1h，本周104站由于电控箱改造停止运营，但兴发站和嘉兴站生产规模均有所上升。
-3.总上料数：累计2018次（自动化1870次，含自动生产1494次、测试376次；另外手动上料148次），自动化上料同比增加522次，主要由于嘉兴和兴发生产回升带来的任务数增加。
-4.总AI时长接管率：84.42%，同比提升5.81%。整体接近目标（85%），嘉兴站AI时长接管率上升明显。避让进料车仍为手动接管时长高的主要原因，此外波然站还存在网络和本体丹福斯阀故障，嘉兴站更换了后毫米波支架。
-5.总生产任务接管率：90.99%，同比提升14.83%。整体未达到目标（83.5%），各站生产任务接管率均有所上升，嘉兴站毫米波支架更换后上升尤为明显。
+    analysis: `1.运营概况：本周共运营4个站点，分别为演示站A、演示站B、演示站F、演示站I。上周生产任务接管率、异常任务远程恢复率、自动化生产方量覆盖率均达标且提升明显；任务成功率和生产时长覆盖率保持在高位稳定；但是由于演示站A站电控箱改造升级停运，导致整体运营时长有所下降。演示站H站上周调试遗留故障问题，并无实际生产，故不计入运营。
+2.总运营时间：177.5h，同比增加1.1h，本周演示站A站由于电控箱改造停止运营，但演示站F站和演示站B站生产规模均有所上升。
+3.总上料数：累计2018次（自动化1870次，含自动生产1494次、测试376次；另外手动上料148次），自动化上料同比增加522次，主要由于演示站B和演示站F生产回升带来的任务数增加。
+4.总AI时长接管率：84.42%，同比提升5.81%。整体接近目标（85%），演示站B站AI时长接管率上升明显。避让进料车仍为手动接管时长高的主要原因，此外演示站I站还存在网络和本体示例液压组件阀故障，演示站B站更换了后毫米波支架。
+5.总生产任务接管率：90.99%，同比提升14.83%。整体未达到目标（83.5%），各站生产任务接管率均有所上升，演示站B站毫米波支架更换后上升尤为明显。
 6.总任务成功率：97.55%，同比下降0.13%。整体达到目标（95.5%），各站点均保持较高水平。
-7.总异常任务远程恢复率：65.96%，同比提升12.83%。整体达到目标（56.5%），嘉兴站异常任务远程恢复率接近90%。
+7.总异常任务远程恢复率：65.96%，同比提升12.83%。整体达到目标（56.5%），演示站B站异常任务远程恢复率接近90%。
 8.总生产时长覆盖率：100%，同比持平，整体达到目标（90%）。各生产站点整体覆盖较好。
 9.自动化生产方量覆盖率：90.99%，同比提升14.83%，整体达到目标（79.5%）。本周自动化生产方量为4183.2方，同比增加2242.8方。
-10.故障及分布：故障频次0.08次/h，同比改善0.01次/h，一级故障占比为0.00%。二级故障共计17次，占比100.00%，其中算法故障13次（轨迹规划失败8次，主程序故障、设备姿态不正确、误避障等共5次）；传感器故障1次（前向激光1次）；本体故障2次（PDU故障1次，丹佛斯阀异常1次）；网络波动导致故障1次。`,
+10.故障及分布：故障频次0.08次/h，同比改善0.01次/h，一级故障占比为0.00%。二级故障共计17次，占比100.00%，其中算法故障13次（轨迹规划失败8次，主程序故障、设备姿态不正确、误避障等共5次）；传感器故障1次（前向激光1次）；本体故障2次（PDU故障1次，示例液压组件阀异常1次）；网络波动导致故障1次。`,
     other: '无人16+23版本测试，远控2.3.5.1开发提测'
   };
 
@@ -338,22 +338,22 @@
   function buildStationTemplate(station, idx, reportRows) {
     const themes = ['#2563eb', '#0ea5e9', '#16a34a', '#f59e0b'];
     const subtitles = {
-      '104': '电控箱改造升级后，当前用于展示停运与恢复过程。',
-      '嘉兴': '毫米波支架调整后，生产与接管表现更稳定。',
-      '兴发': '生产规模回升，自动化与人工协同展示良好。',
-      '波然': '网络与本体故障可视化展示，突出告警与恢复。'
+      '演示站A': '电控箱改造升级后，当前用于展示停运与恢复过程。',
+      '演示站B': '毫米波支架调整后，生产与接管表现更稳定。',
+      '演示站F': '生产规模回升，自动化与人工协同展示良好。',
+      '演示站I': '网络与本体故障可视化展示，突出告警与恢复。'
     };
     const analysisMap = {
-      '104': '上周电控箱改造升级导致该站停运，当前处于恢复展示阶段；本周重点仍为改造后的稳定性验证与远程接管测试。',
-      '嘉兴': '嘉兴站生产回升明显，毫米波支架更换后各项接管指标更稳定；本周重点关注进料避让与异常恢复。',
-      '兴发': '兴发站生产规模较上周提升，自动化运行与人工接管切换保持平稳；本周重点关注轨迹规划与料点协同。',
-      '波然': '波然站受网络波动与本体阀异常影响，故障展示较为明显；本周重点关注网络稳定性与故障收敛。'
+      '演示站A': '上周电控箱改造升级导致该站停运，当前处于恢复展示阶段；本周重点仍为改造后的稳定性验证与远程接管测试。',
+      '演示站B': '演示站B站生产回升明显，毫米波支架更换后各项接管指标更稳定；本周重点关注进料避让与异常恢复。',
+      '演示站F': '演示站F站生产规模较上周提升，自动化运行与人工接管切换保持平稳；本周重点关注轨迹规划与料点协同。',
+      '演示站I': '演示站I站受网络波动与本体阀异常影响，故障展示较为明显；本周重点关注网络稳定性与故障收敛。'
     };
     const focusMap = {
-      '104': '本周重点：继续进行电控箱升级后的验证与标定。',
-      '嘉兴': '本周重点：保持高位稳定，继续优化毫米波支架后的接管效果。',
-      '兴发': '本周重点：继续车上监管生产，推进料斗摄像头加装。',
-      '波然': '本周重点：持续监控网络波动和本体阀状态。'
+      '演示站A': '本周重点：继续进行电控箱升级后的验证与标定。',
+      '演示站B': '本周重点：保持高位稳定，继续优化毫米波支架后的接管效果。',
+      '演示站F': '本周重点：继续车上监管生产，推进料斗摄像头加装。',
+      '演示站I': '本周重点：持续监控网络波动和本体阀状态。'
     };
     return {
       analysis: analysisMap[station] || `${station} 站周报内容已固化为展示模板。`,
@@ -488,7 +488,7 @@
       weeklyReports: reports,
       calendar: {
         [currentWeek[0]]: '本周演示数据已自动生成。',
-        [currentWeek[2]]: '生产监测页使用本地模拟数据，无需 MQTT。',
+        [currentWeek[2]]: '生产监测页完全使用本地模拟数据。',
         [currentWeek[4]]: '90 秒后会自动刷新一次数据。'
       },
       tiers: { updatedAt: ymd(now), rows: [] },
@@ -597,7 +597,7 @@
     return {
       success: true,
       demo_mode: true,
-      mqtt_connected: false,
+      event_source_connected: false,
       message: '静态演示模式：数据会自动轮转',
       stations: s.stations.length,
       generatedAt: s.generatedAt,
@@ -656,8 +656,8 @@
     const s = ensureState();
     const rows = s.records.filter(row => (!startDate || row.date >= startDate) && (!endDate || row.date <= endDate));
     const sites = s.stations.map(site => ({
-      project_id: site.id,
-      project_name: site.name,
+      demo_site_id: site.id,
+      demo_site_name: site.name,
       monitor_production: site.monitor_production,
       production_periods: mergePeriods(rows.filter(row => row.station === site.name), 'productionPeriods'),
       loader_state_periods: mergePeriods(rows.filter(row => row.station === site.name), 'loaderStatePeriods')
@@ -743,7 +743,7 @@
     if (path === '/api/weekly-reports' && method === 'GET') return jsonResponse(currentState.weeklyReports);
     if (path === '/api/calendar/notes' && method === 'GET') return jsonResponse(currentState.calendar);
     if (path === '/api/tiers' && method === 'GET') return jsonResponse(currentState.tiers);
-    if (path === '/api/feishu/issues' && method === 'GET') return jsonResponse({ success: true, records: [] });
+    if (path === '/api/mock/issues' && method === 'GET') return jsonResponse({ success: true, records: [] });
     if (path === '/api/production-monitor' && method === 'GET') {
       return jsonResponse(productionMonitor(url.searchParams.get('station'), url.searchParams.get('date')));
     }

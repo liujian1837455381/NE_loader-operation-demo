@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>无人装载机运营平台</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='8' y='28' width='36' height='18' rx='3' fill='%23F57C00'/%3E%3Crect x='44' y='22' width='12' height='24' rx='2' fill='%23EF6C00'/%3E%3Crect x='10' y='18' width='14' height='10' rx='2' fill='%23FFB74D'/%3E%3Ccircle cx='18' cy='50' r='6' fill='%23424242'/%3E%3Ccircle cx='18' cy='50' r='3' fill='%23757575'/%3E%3Ccircle cx='40' cy='50' r='6' fill='%23424242'/%3E%3Ccircle cx='40' cy='50' r='3' fill='%23757575'/%3E%3Cpath d='M46 26 L56 16 L58 16 L58 26' fill='%23EF6C00'/%3E%3C/svg%3E">
-  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="./vendor/xlsx.full.min.js"></script>
+  <script src="./vendor/chart.min.js"></script>
+  <script src="./vendor/echarts.min.js"></script>
+  <script src="./vendor/html2canvas.min.js"></script>
   <script src="demo-mock.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function(){
@@ -1096,7 +1096,7 @@
             <tr>
               <th>站点名称</th>
               <th style="text-align:center">人工上料效率（秒/次）</th>
-              <th>平台地址</th>
+              <th>模拟接口路径</th>
               <th style="text-align:center">站点阶段</th>
               <th style="text-align:center">平台版本</th>
               <th style="text-align:center">监管生产</th>
@@ -1136,7 +1136,7 @@
     </div>
 
     <!-- 演示状态 -->
-    <div id="monitorMqttStatus" style="font-size:11px;color:var(--text-3);margin-bottom:12px;"></div>
+    <div id="monitorSourceStatus" style="font-size:11px;color:var(--text-3);margin-bottom:12px;"></div>
 
     <div id="monitorLiveHint" style="display:flex;align-items:center;gap:10px;font-size:11px;color:var(--text-3);margin-bottom:12px;">
       <span class="monitor-live-dot"></span>
@@ -1614,9 +1614,9 @@
       <div class="fsec op-stats">
         <div class="fsec-title">问题记录</div>
         <div style="margin-bottom:8px">
-          <button type="button" class="btn btn-outline" onclick="fetchIssuesFromFeishu()" id="btnFetchIssues"
+          <button type="button" class="btn btn-outline" onclick="fetchIssuesFromMock()" id="btnFetchIssues"
             style="font-size:12px;padding:6px 12px">
-            📥 从飞书拉取问题记录
+            📥 从本地模拟数据源拉取问题记录
           </button>
           <span id="issueStatus" style="margin-left:10px;font-size:11px;color:var(--t3)"></span>
         </div>
@@ -1682,8 +1682,8 @@
             <label>站点 *（所有导入日期共用此站点）</label>
             <select id="impSt">
               <option value="">请选择站点</option>
-              <option>104</option><option>嘉兴</option><option>宜涪</option>
-              <option>长赣</option><option>舟山电厂</option><option>兴发盐库</option><option>知行良知</option>
+              <option>演示站A</option><option>演示站B</option><option>演示站C</option>
+              <option>演示站D</option><option>演示站E</option><option>演示站F</option><option>演示站G</option>
             </select>
           </div>
           <div class="fi">
@@ -1827,8 +1827,8 @@
           <input type="number" id="fStationEfficiency" placeholder="默认10" value="10" min="1" required>
         </div>
         <div class="fi">
-          <label>平台地址</label>
-          <input type="text" id="fStationApi" placeholder="如 https://demo-api.invalid/station-104">
+          <label>模拟接口路径</label>
+          <input type="text" id="fStationApi" placeholder="如 ">
         </div>
         <div class="fi">
           <label>站点阶段</label>
@@ -1841,12 +1841,12 @@
           </select>
         </div>
         <div class="fi">
-          <label>项目ID</label>
-          <input type="number" id="fStationProjectId" placeholder="如 2">
+          <label>演示站点编号</label>
+          <input type="number" id="fStationDemoId" placeholder="如 2">
         </div>
         <div class="fi">
-          <label>接口Token</label>
-          <input type="text" id="fStationToken" placeholder="x-rbac-token 值">
+          <label>演示访问备注</label>
+          <input type="text" id="fStationAccessNote" placeholder="演示访问凭据（可留空）">
         </div>
         <div class="fi">
           <label>平台版本</label>
@@ -2002,7 +2002,7 @@ const ReportsAPI = {
 // ═══ TARGETS (localStorage) ═══
 const TARGET_LS_KEY = 'stationTargets_v1';
 const GLOBAL_TARGET_LS_KEY = 'globalTargets_v1';
-const STATION_LIST = ['104','嘉兴','宜涪','长赣','舟山电厂','兴发盐库','知行良知'];
+const STATION_LIST = ['演示站A','演示站B','演示站C','演示站D','演示站E','演示站F','演示站G'];
 let stationTargets = loadStationTargets();
 function loadStationTargets() {
   try {
@@ -2032,29 +2032,17 @@ function saveGlobalTargets() {
 }
 
 // ─ API layer ─
-// 如果直接双击打开 index.html（file://），相对路径 fetch('/api/records') 会失效。
-// 兜底使用 server.py 默认端口，保证依然能读取/写入 data.json。
-const API_BASE = (location.protocol === 'file:' || !location.host) ? 'http://localhost:8090' : '';
+// 静态演示始终使用同源 mock 路径，由 demo-mock.js 在浏览器内拦截处理。
+const API_BASE = '';
 const MOCK_FALLBACK_ENABLED = true;
 
-// ─ 飞书配置 ─
-const FEISHU_CONFIG = {
-  appId: 'demo-app-id',
-  appSecret: 'demo-app-secret',
-  appToken: 'demo-app-token',
-  tableId: 'demo-table-id',
-  tokenKey: 'feishu_access_token',
-  tokenExpireKey: 'feishu_token_expire',
-  apiBase: 'https://open.feishu.cn/open-apis'
-};
-
-// 飞书API（通过后端代理）
-const FeishuAPI = {
+// 本地模拟数据接口，不连接任何真实服务。
+const MockIssueAPI = {
   // 查询问题记录（通过本地后端代理）
   async fetchIssueRecords(station, date) {
-    console.log(`准备查询飞书记录: 站点=${station}, 日期=${date}`);
+    console.log(`准备查询本地模拟数据源记录: 站点=${station}, 日期=${date}`);
 
-    const url = `${API_BASE}/api/feishu/issues?station=${encodeURIComponent(station)}&date=${encodeURIComponent(date)}`;
+    const url = `${API_BASE}/api/mock/issues?station=${encodeURIComponent(station)}&date=${encodeURIComponent(date)}`;
     console.log('请求代理URL:', url);
 
     try {
@@ -2221,20 +2209,20 @@ async function bootstrapMockData() {
         efficiencyRatio: 0.8742
       },
       siteDetails: [
-        { station: '104', opTime: 9.8, autoFeed: 114, autoProdFeed: 114, manualFeed: 0, aiRate: 0.9508, prodRate: 1, succRate: 0.9828, abnRec: 0, faultFreq: 0, prodHours: 9.8, takeoverHours: 9.2, prodCov: 1, autoVol: 106.4, totalVol: 106.4, efficiencyRatio: 0.875 },
-        { station: '嘉兴', opTime: 66.5, autoFeed: 1004, autoProdFeed: 900, manualFeed: 104, aiRate: 0.7885, prodRate: 0.896, succRate: 0.9688, abnRec: 0.8621, faultFreq: 0.01, prodHours: 66.5, takeoverHours: 60.0, prodCov: 1, autoVol: 2800, totalVol: 2800, efficiencyRatio: 0.7727 },
-        { station: '兴发', opTime: 67.4, autoFeed: 555, autoProdFeed: 525, manualFeed: 30, aiRate: 0.9263, prodRate: 0.9453, succRate: 0.9906, abnRec: 0.2, faultFreq: 0.01, prodHours: 67.4, takeoverHours: 63.8, prodCov: 1, autoVol: 1534.4, totalVol: 1534.4, efficiencyRatio: 0.4014 },
-        { station: '波然', opTime: 33.8, autoFeed: 345, autoProdFeed: 331, manualFeed: 14, aiRate: 0.759, prodRate: 0.75, succRate: 0.9678, abnRec: 0.4545, faultFreq: 0.18, prodHours: 33.8, takeoverHours: 25.3, prodCov: 1, autoVol: 156.8, totalVol: 156.8, efficiencyRatio: 0.6285 }
+        { station: '演示站A', opTime: 9.8, autoFeed: 114, autoProdFeed: 114, manualFeed: 0, aiRate: 0.9508, prodRate: 1, succRate: 0.9828, abnRec: 0, faultFreq: 0, prodHours: 9.8, takeoverHours: 9.2, prodCov: 1, autoVol: 106.4, totalVol: 106.4, efficiencyRatio: 0.875 },
+        { station: '演示站B', opTime: 66.5, autoFeed: 1004, autoProdFeed: 900, manualFeed: 104, aiRate: 0.7885, prodRate: 0.896, succRate: 0.9688, abnRec: 0.8621, faultFreq: 0.01, prodHours: 66.5, takeoverHours: 60.0, prodCov: 1, autoVol: 2800, totalVol: 2800, efficiencyRatio: 0.7727 },
+        { station: '演示站F', opTime: 67.4, autoFeed: 555, autoProdFeed: 525, manualFeed: 30, aiRate: 0.9263, prodRate: 0.9453, succRate: 0.9906, abnRec: 0.2, faultFreq: 0.01, prodHours: 67.4, takeoverHours: 63.8, prodCov: 1, autoVol: 1534.4, totalVol: 1534.4, efficiencyRatio: 0.4014 },
+        { station: '演示站I', opTime: 33.8, autoFeed: 345, autoProdFeed: 331, manualFeed: 14, aiRate: 0.759, prodRate: 0.75, succRate: 0.9678, abnRec: 0.4545, faultFreq: 0.18, prodHours: 33.8, takeoverHours: 25.3, prodCov: 1, autoVol: 156.8, totalVol: 156.8, efficiencyRatio: 0.6285 }
       ],
       siteTargets: {},
       siteCards: {
-        '104': { analysis: '上周电控箱改造升级导致该站停运，当前处于恢复展示阶段。', focus: '本周重点：继续进行电控箱升级后的验证与标定。', image: '' },
-        '嘉兴': { analysis: '嘉兴站生产回升明显，毫米波支架更换后各项接管指标更稳定。', focus: '本周重点：保持高位稳定，继续优化毫米波支架后的接管效果。', image: '' },
-        '兴发': { analysis: '兴发站生产规模较上周提升，自动化运行与人工接管切换保持平稳。', focus: '本周重点：继续车上监管生产，推进料斗摄像头加装。', image: '' },
-        '波然': { analysis: '波然站受网络波动与本体阀异常影响，故障展示较为明显。', focus: '本周重点：持续监控网络波动和本体阀状态。', image: '' }
+        '演示站A': { analysis: '上周电控箱改造升级导致该站停运，当前处于恢复展示阶段。', focus: '本周重点：继续进行电控箱升级后的验证与标定。', image: '' },
+        '演示站B': { analysis: '演示站B站生产回升明显，毫米波支架更换后各项接管指标更稳定。', focus: '本周重点：保持高位稳定，继续优化毫米波支架后的接管效果。', image: '' },
+        '演示站F': { analysis: '演示站F站生产规模较上周提升，自动化运行与人工接管切换保持平稳。', focus: '本周重点：继续车上监管生产，推进料斗摄像头加装。', image: '' },
+        '演示站I': { analysis: '演示站I站受网络波动与本体阀异常影响，故障展示较为明显。', focus: '本周重点：持续监控网络波动和本体阀状态。', image: '' }
       },
       records: [],
-      analysis: '1.运营概况：本周共运营4个站点，分别为104、嘉兴、兴发、波然。',
+      analysis: '1.运营概况：本周共运营4个站点，分别为演示站A、演示站B、演示站F、演示站I。',
       otherMatters: '无人16+23版本测试，远控2.3.5.1开发提测',
       createdAt: '2026-08-09 00:00:00'
     }];
@@ -2892,12 +2880,12 @@ async function fetchFromStatsTool() {
         }
       }
 
-      // token 过期：像一键导出那样弹窗报错
-      if (errorData && errorData.error_code === 'TOKEN_EXPIRED') {
+      // accessNote 过期：像一键导出那样弹窗报错
+      if (errorData && errorData.error_code === 'DEMO_ACCESS_EXPIRED') {
         const msg = errorData.error ||
-          (`站点「${errorData.site || station}」的 BI token 已过期`);
+          (`站点「${errorData.site || station}」的 演示访问凭据 已过期`);
         alert('⚠️ ' + msg);
-        statusEl.textContent = `✗ ${errorData.site || station} 的 token 已过期，请更新后重试`;
+        statusEl.textContent = `✗ ${errorData.site || station} 的 演示访问状态已过期，请更新后重试`;
         statusEl.style.color = 'var(--danger)';
         return;
       }
@@ -2921,9 +2909,9 @@ async function fetchFromStatsTool() {
   } catch (err) {
     let errorMsg = err.message;
 
-    // 如果是飞书相关错误，给出更友好的提示
-    if (errorMsg.includes('拉取飞书记录失败')) {
-      errorMsg = '服务器从飞书拉取数据失败。可能原因：该日期无数据、飞书连接问题等。请尝试其他日期或联系管理员。';
+    // 如果是本地模拟数据源相关错误，给出更友好的提示
+    if (errorMsg.includes('拉取本地模拟数据源记录失败')) {
+      errorMsg = '服务器从本地模拟数据源拉取数据失败。可能原因：该日期无数据、本地模拟数据源连接问题等。请尝试其他日期或联系管理员。';
     }
 
     statusEl.textContent = '✗ 拉取失败: ' + errorMsg;
@@ -3348,8 +3336,8 @@ let currentIssues = []; // 存储当前拉取的问题记录
 let issueSortField = 'occurTime'; // 问题记录排序字段：occurTime / takeoverDuration / manualFeedCount
 let issueSortDir = 'desc'; // 排序方向：asc / desc
 
-// 从飞书拉取问题记录
-async function fetchIssuesFromFeishu() {
+// 从本地模拟数据源拉取问题记录
+async function fetchIssuesFromMock() {
   const station = document.getElementById('fSt').value;
   const date = document.getElementById('fDt').value;
 
@@ -3368,12 +3356,12 @@ async function fetchIssuesFromFeishu() {
 
   btn.disabled = true;
   btn.textContent = '拉取中...';
-  status.textContent = '正在从飞书获取问题记录...';
+  status.textContent = '正在从本地模拟数据源获取问题记录...';
   status.style.color = 'var(--accent)';
 
   try {
-    console.log(`开始拉取飞书问题记录: 站点=${station}, 日期=${date}`);
-    const records = await FeishuAPI.fetchIssueRecords(station, date);
+    console.log(`开始拉取本地模拟数据源问题记录: 站点=${station}, 日期=${date}`);
+    const records = await MockIssueAPI.fetchIssueRecords(station, date);
 
     if (records.length === 0) {
       status.textContent = '该站点当天无问题记录';
@@ -3395,7 +3383,7 @@ async function fetchIssuesFromFeishu() {
     document.getElementById('issuesTableContainer').style.display = 'block';
 
   } catch (err) {
-    console.error('拉取飞书问题记录失败:', err);
+    console.error('拉取本地模拟数据源问题记录失败:', err);
     status.textContent = `✗ 拉取失败: ${err.message}`;
     status.style.color = 'var(--danger)';
     currentIssues = [];
@@ -3428,7 +3416,7 @@ function aggregateIssues(records) {
 
   console.log(`开始聚合 ${records.length} 条记录`);
 
-  // 辅助函数：提取文本值（处理飞书的富文本格式）
+  // 辅助函数：提取文本值（处理本地模拟数据源的富文本格式）
   const extractText = (value) => {
     if (!value) return '';
     if (typeof value === 'string') return value.trim();
@@ -5422,8 +5410,8 @@ function openAddStation() {
   document.getElementById('fStationEfficiency').value = '10';
   document.getElementById('fStationApi').value = '';
   document.getElementById('fStationStage').value = '1';
-  document.getElementById('fStationProjectId').value = '';
-  document.getElementById('fStationToken').value = '';
+  document.getElementById('fStationDemoId').value = '';
+  document.getElementById('fStationAccessNote').value = '';
   document.getElementById('fStationSheetMode').value = 'simple';
   document.getElementById('fStationMonitor').checked = true;
   document.getElementById('fStationMonitorLoader').checked = true;
@@ -5440,8 +5428,8 @@ function openEditStation(id) {
   document.getElementById('fStationEfficiency').value = station.manualEfficiency || 10;
   document.getElementById('fStationApi').value = station.api || '';
   document.getElementById('fStationStage').value = station.stage || 1;
-  document.getElementById('fStationProjectId').value = station.project_id || '';
-  document.getElementById('fStationToken').value = station.token || '';
+  document.getElementById('fStationDemoId').value = station.demo_site_id || '';
+  document.getElementById('fStationAccessNote').value = station.accessNote || '';
   document.getElementById('fStationSheetMode').value = station.sheet_mode || 'simple';
   document.getElementById('fStationMonitor').checked = station.monitor_production !== false;
   document.getElementById('fStationMonitorLoader').checked = station.monitor_loader_state !== false;
@@ -5453,8 +5441,8 @@ async function saveStation() {
   const efficiency = parseInt(document.getElementById('fStationEfficiency').value) || 10;
   const api = document.getElementById('fStationApi').value.trim();
   const stage = parseInt(document.getElementById('fStationStage').value) || 1;
-  const project_id = parseInt(document.getElementById('fStationProjectId').value) || 0;
-  const token = document.getElementById('fStationToken').value.trim();
+  const demo_site_id = parseInt(document.getElementById('fStationDemoId').value) || 0;
+  const accessNote = document.getElementById('fStationAccessNote').value.trim();
   const sheet_mode = document.getElementById('fStationSheetMode').value || 'simple';
   const monitor_production = document.getElementById('fStationMonitor').checked;
   const monitor_loader_state = document.getElementById('fStationMonitorLoader').checked;
@@ -5473,7 +5461,7 @@ async function saveStation() {
       // 更新站点
       const oldStation = stationsStore.find(s => s.id === editingStationId);
       const oldName = oldStation ? oldStation.name : null;
-      const station = { id: editingStationId, name, manualEfficiency: efficiency, api, stage, project_id, token, sheet_mode, monitor_production, monitor_loader_state };
+      const station = { id: editingStationId, name, manualEfficiency: efficiency, api, stage, demo_site_id, accessNote, sheet_mode, monitor_production, monitor_loader_state };
       await StationsAPI.update(station);
 
       // 如果站点名称发生变化，更新所有运营数据记录中的站点字段
@@ -5493,7 +5481,7 @@ async function saveStation() {
       }
     } else {
       // 新增
-      const station = { id: Date.now(), name, manualEfficiency: efficiency, api, stage, project_id, token, sheet_mode, monitor_production, monitor_loader_state };
+      const station = { id: Date.now(), name, manualEfficiency: efficiency, api, stage, demo_site_id, accessNote, sheet_mode, monitor_production, monitor_loader_state };
       await StationsAPI.add(station);
     }
 
@@ -5815,7 +5803,7 @@ function initFaultFilter() {
 
 // ═══ 生产监测功能 ═══
 // 注释：生产监测功能已移除，改为跳转到外部系统
-// URL: https://demo-monitor.invalid/static/index.html
+// URL: 本地静态演示页面
 /*
 function initMonitor() {
   // 设置默认日期为今天
@@ -5927,7 +5915,7 @@ function displayProductionData(data) {
 }
 
 function resetMonitor() {
-  document.getElementById('monitorStation').value = '104';
+  document.getElementById('monitorStation').value = '演示站A';
   document.getElementById('monitorDate').value = new Date().toISOString().split('T')[0];
   document.getElementById('timelineCard').style.display = 'none';
   document.getElementById('statsCard').style.display = 'none';
@@ -5948,7 +5936,7 @@ async function updateHistoricalIssueRecords() {
 
     // 连续失败3次则停止（可能是网络/白名单问题）
     if (consecutiveFailures >= 3) {
-      console.warn('连续失败3次，停止自动拉取（可能飞书IP白名单未配置）');
+      console.warn('连续失败3次，停止自动拉取（可能本地模拟数据源本地模拟数据配置未配置）');
       break;
     }
 
@@ -5962,7 +5950,7 @@ async function updateHistoricalIssueRecords() {
     }
 
     try {
-      const records = await FeishuAPI.fetchIssueRecords(rec.station, rec.date);
+      const records = await MockIssueAPI.fetchIssueRecords(rec.station, rec.date);
       consecutiveFailures = 0;
 
       if (records.length > 0) {
@@ -6433,20 +6421,20 @@ function toggleTheme() {
           efficiencyRatio: 0.8742
         },
         siteDetails: [
-          { station: '104', opTime: 9.8, autoFeed: 114, autoProdFeed: 114, manualFeed: 0, aiRate: 0.9508, prodRate: 1, succRate: 0.9828, abnRec: 0, faultFreq: 0, prodHours: 9.8, takeoverHours: 9.2, prodCov: 1, autoVol: 106.4, totalVol: 106.4, efficiencyRatio: 0.875 },
-          { station: '嘉兴', opTime: 66.5, autoFeed: 1004, autoProdFeed: 900, manualFeed: 104, aiRate: 0.7885, prodRate: 0.896, succRate: 0.9688, abnRec: 0.8621, faultFreq: 0.01, prodHours: 66.5, takeoverHours: 60.0, prodCov: 1, autoVol: 2800, totalVol: 2800, efficiencyRatio: 0.7727 },
-          { station: '兴发', opTime: 67.4, autoFeed: 555, autoProdFeed: 525, manualFeed: 30, aiRate: 0.9263, prodRate: 0.9453, succRate: 0.9906, abnRec: 0.2, faultFreq: 0.01, prodHours: 67.4, takeoverHours: 63.8, prodCov: 1, autoVol: 1534.4, totalVol: 1534.4, efficiencyRatio: 0.4014 },
-          { station: '波然', opTime: 33.8, autoFeed: 345, autoProdFeed: 331, manualFeed: 14, aiRate: 0.759, prodRate: 0.75, succRate: 0.9678, abnRec: 0.4545, faultFreq: 0.18, prodHours: 33.8, takeoverHours: 25.3, prodCov: 1, autoVol: 156.8, totalVol: 156.8, efficiencyRatio: 0.6285 }
+          { station: '演示站A', opTime: 9.8, autoFeed: 114, autoProdFeed: 114, manualFeed: 0, aiRate: 0.9508, prodRate: 1, succRate: 0.9828, abnRec: 0, faultFreq: 0, prodHours: 9.8, takeoverHours: 9.2, prodCov: 1, autoVol: 106.4, totalVol: 106.4, efficiencyRatio: 0.875 },
+          { station: '演示站B', opTime: 66.5, autoFeed: 1004, autoProdFeed: 900, manualFeed: 104, aiRate: 0.7885, prodRate: 0.896, succRate: 0.9688, abnRec: 0.8621, faultFreq: 0.01, prodHours: 66.5, takeoverHours: 60.0, prodCov: 1, autoVol: 2800, totalVol: 2800, efficiencyRatio: 0.7727 },
+          { station: '演示站F', opTime: 67.4, autoFeed: 555, autoProdFeed: 525, manualFeed: 30, aiRate: 0.9263, prodRate: 0.9453, succRate: 0.9906, abnRec: 0.2, faultFreq: 0.01, prodHours: 67.4, takeoverHours: 63.8, prodCov: 1, autoVol: 1534.4, totalVol: 1534.4, efficiencyRatio: 0.4014 },
+          { station: '演示站I', opTime: 33.8, autoFeed: 345, autoProdFeed: 331, manualFeed: 14, aiRate: 0.759, prodRate: 0.75, succRate: 0.9678, abnRec: 0.4545, faultFreq: 0.18, prodHours: 33.8, takeoverHours: 25.3, prodCov: 1, autoVol: 156.8, totalVol: 156.8, efficiencyRatio: 0.6285 }
         ],
         siteTargets: {},
         siteCards: {
-          '104': { analysis: '上周电控箱改造升级导致该站停运，当前处于恢复展示阶段。', focus: '本周重点：继续进行电控箱升级后的验证与标定。', image: '' },
-          '嘉兴': { analysis: '嘉兴站生产回升明显，毫米波支架更换后各项接管指标更稳定。', focus: '本周重点：保持高位稳定，继续优化毫米波支架后的接管效果。', image: '' },
-          '兴发': { analysis: '兴发站生产规模较上周提升，自动化运行与人工接管切换保持平稳。', focus: '本周重点：继续车上监管生产，推进料斗摄像头加装。', image: '' },
-          '波然': { analysis: '波然站受网络波动与本体阀异常影响，故障展示较为明显。', focus: '本周重点：持续监控网络波动和本体阀状态。', image: '' }
+          '演示站A': { analysis: '上周电控箱改造升级导致该站停运，当前处于恢复展示阶段。', focus: '本周重点：继续进行电控箱升级后的验证与标定。', image: '' },
+          '演示站B': { analysis: '演示站B站生产回升明显，毫米波支架更换后各项接管指标更稳定。', focus: '本周重点：保持高位稳定，继续优化毫米波支架后的接管效果。', image: '' },
+          '演示站F': { analysis: '演示站F站生产规模较上周提升，自动化运行与人工接管切换保持平稳。', focus: '本周重点：继续车上监管生产，推进料斗摄像头加装。', image: '' },
+          '演示站I': { analysis: '演示站I站受网络波动与本体阀异常影响，故障展示较为明显。', focus: '本周重点：持续监控网络波动和本体阀状态。', image: '' }
         },
         records: [],
-        analysis: '1.运营概况：本周共运营4个站点，分别为104、嘉兴、兴发、波然。',
+        analysis: '1.运营概况：本周共运营4个站点，分别为演示站A、演示站B、演示站F、演示站I。',
         otherMatters: '无人16+23版本测试，远控2.3.5.1开发提测',
         createdAt: '2026-08-09 00:00:00'
       }];
@@ -6477,20 +6465,20 @@ function toggleTheme() {
         efficiencyRatio: 0.8742
       },
       siteDetails: [
-        { station: '104', opTime: 9.8, autoFeed: 114, autoProdFeed: 114, manualFeed: 0, aiRate: 0.9508, prodRate: 1, succRate: 0.9828, abnRec: 0, faultFreq: 0, prodHours: 9.8, takeoverHours: 9.2, prodCov: 1, autoVol: 106.4, totalVol: 106.4, efficiencyRatio: 0.875 },
-        { station: '嘉兴', opTime: 66.5, autoFeed: 1004, autoProdFeed: 900, manualFeed: 104, aiRate: 0.7885, prodRate: 0.896, succRate: 0.9688, abnRec: 0.8621, faultFreq: 0.01, prodHours: 66.5, takeoverHours: 60.0, prodCov: 1, autoVol: 2800, totalVol: 2800, efficiencyRatio: 0.7727 },
-        { station: '兴发', opTime: 67.4, autoFeed: 555, autoProdFeed: 525, manualFeed: 30, aiRate: 0.9263, prodRate: 0.9453, succRate: 0.9906, abnRec: 0.2, faultFreq: 0.01, prodHours: 67.4, takeoverHours: 63.8, prodCov: 1, autoVol: 1534.4, totalVol: 1534.4, efficiencyRatio: 0.4014 },
-        { station: '波然', opTime: 33.8, autoFeed: 345, autoProdFeed: 331, manualFeed: 14, aiRate: 0.759, prodRate: 0.75, succRate: 0.9678, abnRec: 0.4545, faultFreq: 0.18, prodHours: 33.8, takeoverHours: 25.3, prodCov: 1, autoVol: 156.8, totalVol: 156.8, efficiencyRatio: 0.6285 }
+        { station: '演示站A', opTime: 9.8, autoFeed: 114, autoProdFeed: 114, manualFeed: 0, aiRate: 0.9508, prodRate: 1, succRate: 0.9828, abnRec: 0, faultFreq: 0, prodHours: 9.8, takeoverHours: 9.2, prodCov: 1, autoVol: 106.4, totalVol: 106.4, efficiencyRatio: 0.875 },
+        { station: '演示站B', opTime: 66.5, autoFeed: 1004, autoProdFeed: 900, manualFeed: 104, aiRate: 0.7885, prodRate: 0.896, succRate: 0.9688, abnRec: 0.8621, faultFreq: 0.01, prodHours: 66.5, takeoverHours: 60.0, prodCov: 1, autoVol: 2800, totalVol: 2800, efficiencyRatio: 0.7727 },
+        { station: '演示站F', opTime: 67.4, autoFeed: 555, autoProdFeed: 525, manualFeed: 30, aiRate: 0.9263, prodRate: 0.9453, succRate: 0.9906, abnRec: 0.2, faultFreq: 0.01, prodHours: 67.4, takeoverHours: 63.8, prodCov: 1, autoVol: 1534.4, totalVol: 1534.4, efficiencyRatio: 0.4014 },
+        { station: '演示站I', opTime: 33.8, autoFeed: 345, autoProdFeed: 331, manualFeed: 14, aiRate: 0.759, prodRate: 0.75, succRate: 0.9678, abnRec: 0.4545, faultFreq: 0.18, prodHours: 33.8, takeoverHours: 25.3, prodCov: 1, autoVol: 156.8, totalVol: 156.8, efficiencyRatio: 0.6285 }
       ],
       siteTargets: {},
       siteCards: {
-        '104': { analysis: '上周电控箱改造升级导致该站停运，当前处于恢复展示阶段。', focus: '本周重点：继续进行电控箱升级后的验证与标定。', image: '' },
-        '嘉兴': { analysis: '嘉兴站生产回升明显，毫米波支架更换后各项接管指标更稳定。', focus: '本周重点：保持高位稳定，继续优化毫米波支架后的接管效果。', image: '' },
-        '兴发': { analysis: '兴发站生产规模较上周提升，自动化运行与人工接管切换保持平稳。', focus: '本周重点：继续车上监管生产，推进料斗摄像头加装。', image: '' },
-        '波然': { analysis: '波然站受网络波动与本体阀异常影响，故障展示较为明显。', focus: '本周重点：持续监控网络波动和本体阀状态。', image: '' }
+        '演示站A': { analysis: '上周电控箱改造升级导致该站停运，当前处于恢复展示阶段。', focus: '本周重点：继续进行电控箱升级后的验证与标定。', image: '' },
+        '演示站B': { analysis: '演示站B站生产回升明显，毫米波支架更换后各项接管指标更稳定。', focus: '本周重点：保持高位稳定，继续优化毫米波支架后的接管效果。', image: '' },
+        '演示站F': { analysis: '演示站F站生产规模较上周提升，自动化运行与人工接管切换保持平稳。', focus: '本周重点：继续车上监管生产，推进料斗摄像头加装。', image: '' },
+        '演示站I': { analysis: '演示站I站受网络波动与本体阀异常影响，故障展示较为明显。', focus: '本周重点：持续监控网络波动和本体阀状态。', image: '' }
       },
       records: [],
-      analysis: '1.运营概况：本周共运营4个站点，分别为104、嘉兴、兴发、波然。',
+      analysis: '1.运营概况：本周共运营4个站点，分别为演示站A、演示站B、演示站F、演示站I。',
       otherMatters: '无人16+23版本测试，远控2.3.5.1开发提测',
       createdAt: '2026-08-09 00:00:00'
     }];
@@ -6568,8 +6556,8 @@ async function monitorLoadSites() {
     const state = bootstrap && bootstrap.state ? bootstrap.state : null;
     _monitorAllSites = state && Array.isArray(state.stations)
       ? state.stations.map(s => ({
-          project_id: s.id,
-          project_name: s.name,
+          demo_site_id: s.id,
+          demo_site_name: s.name,
           monitor_production: s.monitor_production !== false,
           monitor_loader_state: s.monitor_loader_state !== false
         }))
@@ -6587,9 +6575,9 @@ function monitorFillSiteSelect() {
   });
   filtered.forEach(s => {
     const opt = document.createElement('option');
-    opt.value = String(s.project_id);
-    opt.textContent = s.project_name;
-    if (_monitorSelectedSite === String(s.project_id)) opt.selected = true;
+    opt.value = String(s.demo_site_id);
+    opt.textContent = s.demo_site_name;
+    if (_monitorSelectedSite === String(s.demo_site_id)) opt.selected = true;
     sel.appendChild(opt);
   });
 }
@@ -6628,20 +6616,20 @@ async function monitorRefresh() {
   const endDate = document.getElementById('monitorEndDate').value;
   if (!startDate || !endDate) return;
 
-  // Load MQTT status
+  // Load 本地事件源 status
   try {
     const statusResp = await fetch('/api/monitor/status');
     const statusJson = await statusResp.json();
-    const mqttEl = document.getElementById('monitorMqttStatus');
-    if (statusJson.mqtt_connected) {
-      mqttEl.innerHTML = '<span style="color:#22c55e;">● MQTT 已连接</span> · 监测 ' + (statusJson.data||[]).length + ' 个站点';
+    const sourceEl = document.getElementById('monitorSourceStatus');
+    if (statusJson.event_source_connected) {
+      sourceEl.innerHTML = '<span style="color:#22c55e;">● 本地事件源 已连接</span> · 监测 ' + (statusJson.data||[]).length + ' 个站点';
     } else if (statusJson.demo_mode) {
-      mqttEl.innerHTML = '<span style="color:#f59e0b;">● 静态演示模式</span> · ' + (statusJson.message || '本地自动生成数据');
+      sourceEl.innerHTML = '<span style="color:#f59e0b;">● 静态演示模式</span> · ' + (statusJson.message || '本地自动生成数据');
     } else {
-      mqttEl.innerHTML = '<span style="color:#ef4444;">● MQTT 未连接</span>';
+      sourceEl.innerHTML = '<span style="color:#ef4444;">● 本地事件源 未连接</span>';
     }
     if (typeof statusJson.generatedAt === 'string' && statusJson.generatedAt) {
-      mqttEl.innerHTML += '<span style="margin-left:8px;color:var(--text-3);">' + statusJson.generatedAt.replace('T', ' ').slice(0, 19) + '</span>';
+      sourceEl.innerHTML += '<span style="margin-left:8px;color:var(--text-3);">' + statusJson.generatedAt.replace('T', ' ').slice(0, 19) + '</span>';
     }
   } catch(e) {}
 
@@ -6649,7 +6637,7 @@ async function monitorRefresh() {
     // Load dashboard metrics
     try {
       let url = '/api/monitor/dashboard?start_date=' + startDate + '&end_date=' + endDate;
-      if (_monitorSelectedSite) url += '&project_id=' + _monitorSelectedSite;
+      if (_monitorSelectedSite) url += '&demo_site_id=' + _monitorSelectedSite;
       const resp = await fetch(url);
       const json = await resp.json();
       const d = json.data || {};
@@ -6666,7 +6654,7 @@ async function monitorRefresh() {
   // Load timeline
   try {
     let url = '/api/monitor/timeline?start_date=' + startDate + '&end_date=' + endDate;
-    if (_monitorSelectedSite) url += '&project_id=' + _monitorSelectedSite;
+    if (_monitorSelectedSite) url += '&demo_site_id=' + _monitorSelectedSite;
     const resp = await fetch(url);
     const json = await resp.json();
     const data = json.data || {};
@@ -6727,7 +6715,7 @@ function renderMonitorTimeline(data, startDate, endDate, containerId, tabType) {
     const title = document.createElement('div');
     title.style.cssText = 'font-size:13px;font-weight:600;color:var(--text-1);margin-bottom:8px;display:flex;align-items:center;gap:6px;';
     const dotColor = tabType === 'production' ? '#f59e0b' : '#3b82f6';
-    title.innerHTML = '<span style="width:8px;height:8px;border-radius:50%;background:' + dotColor + ';"></span>' + (site.project_name || '站点' + site.project_id);
+    title.innerHTML = '<span style="width:8px;height:8px;border-radius:50%;background:' + dotColor + ';"></span>' + (site.demo_site_name || '站点' + site.demo_site_id);
     block.appendChild(title);
 
     const showProd = tabType === 'production' && site.monitor_production !== false && site.production_periods;

@@ -27,7 +27,7 @@
     },
     "siteDetails": [
       {
-        "station": "104",
+        "station": "演示站A",
         "opTime": 45.18333333333333,
         "autoFeed": 707,
         "autoProdFeed": 404,
@@ -51,7 +51,7 @@
         "_f3": 0
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "opTime": 67.91666666666667,
         "autoFeed": 513,
         "autoProdFeed": 501,
@@ -75,7 +75,7 @@
         "_f3": 0
       },
       {
-        "station": "甘肃路桥",
+        "station": "演示站H",
         "opTime": 19,
         "autoFeed": 60,
         "autoProdFeed": 22,
@@ -99,7 +99,7 @@
         "_f3": 1
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "opTime": 55.083333333333336,
         "autoFeed": 595,
         "autoProdFeed": 595,
@@ -123,7 +123,7 @@
         "_f3": 0
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "opTime": 23.333333333333332,
         "autoFeed": 367,
         "autoProdFeed": 35,
@@ -149,7 +149,7 @@
     ],
     "globalTargets": {},
     "siteTargets": {
-      "104": {
+      "演示站A": {
         "opHours": "56",
         "autoFeed": "883",
         "aiRate": 0.93,
@@ -160,7 +160,7 @@
         "autoVolCov": 0.84,
         "effRatio": 0.95
       },
-      "兴发": {
+      "演示站F": {
         "opHours": "84",
         "autoFeed": "641",
         "aiRate": 0.91,
@@ -171,7 +171,7 @@
         "autoVolCov": 0.85,
         "effRatio": 0.55
       },
-      "甘肃路桥": {
+      "演示站H": {
         "opHours": "23",
         "autoFeed": "75",
         "aiRate": 0.9,
@@ -182,7 +182,7 @@
         "autoVolCov": 0.53,
         "effRatio": 0.65
       },
-      "嘉兴": {
+      "演示站B": {
         "opHours": "68",
         "autoFeed": "743",
         "aiRate": 0.95,
@@ -193,7 +193,7 @@
         "autoVolCov": 0.85,
         "effRatio": 0.8
       },
-      "波然": {
+      "演示站I": {
         "opHours": "29",
         "autoFeed": "458",
         "aiRate": 0.93,
@@ -207,7 +207,7 @@
     },
     "records": [
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-06-29",
         "totalOpTime": "475",
         "autoFeedTotal": "62",
@@ -312,7 +312,7 @@
         "id": 1782791226696
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-06-29",
         "totalOpTime": "665",
         "autoFeedTotal": "60",
@@ -397,7 +397,7 @@
         "id": 1782791256759
       },
       {
-        "station": "甘肃路桥",
+        "station": "演示站H",
         "date": "2026-06-29",
         "totalOpTime": "339",
         "autoFeedTotal": "36",
@@ -406,7 +406,7 @@
         "manualFeed": "20",
         "abnormalTask": "5",
         "autoWorkDuration": "235",
-        "localCtrlDuration": "104",
+        "localCtrlDuration": "演示站A",
         "prodDuration": "330",
         "takeoverDuration": "330",
         "avgFeedDuration": "124",
@@ -452,7 +452,7 @@
         "id": 1782791284671
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-06-30",
         "totalOpTime": "422",
         "autoFeedTotal": "109",
@@ -497,7 +497,7 @@
         "id": 1782872993349
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-06-30",
         "totalOpTime": "150",
         "autoFeedTotal": "54",
@@ -542,7 +542,7 @@
         "id": 1782873010637
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-06-30",
         "totalOpTime": "715",
         "autoFeedTotal": "80",
@@ -566,7 +566,7 @@
         "id": 1782873032440
       },
       {
-        "station": "甘肃路桥",
+        "station": "演示站H",
         "date": "2026-06-30",
         "totalOpTime": "160",
         "autoFeedTotal": "18",
@@ -601,7 +601,7 @@
         "id": 1782873053128
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-01",
         "totalOpTime": "400",
         "autoFeedTotal": "101",
@@ -625,7 +625,7 @@
         "id": 1782961703633
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-01",
         "totalOpTime": "459",
         "autoFeedTotal": "150",
@@ -670,12 +670,12 @@
         "id": 1782961754873
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-01",
         "totalOpTime": "688",
         "autoFeedTotal": "107",
         "testTaskCount": "3",
-        "autoProdFeed": "104",
+        "autoProdFeed": "演示站A",
         "manualFeed": "7",
         "abnormalTask": "0",
         "autoWorkDuration": "576",
@@ -694,7 +694,7 @@
         "id": 1782961778665
       },
       {
-        "station": "甘肃路桥",
+        "station": "演示站H",
         "date": "2026-07-01",
         "totalOpTime": "641",
         "autoFeedTotal": "6",
@@ -739,7 +739,7 @@
         "id": 1782961801073
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-01",
         "totalOpTime": "250",
         "autoFeedTotal": "70",
@@ -763,7 +763,7 @@
         "id": 1782973656296
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-06-29",
         "totalOpTime": "515",
         "autoFeedTotal": "56",
@@ -787,7 +787,7 @@
         "id": 1782975139954
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-02",
         "totalOpTime": "511",
         "autoFeedTotal": "122",
@@ -842,7 +842,7 @@
         "id": 1783044420875
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-02",
         "totalOpTime": "830",
         "autoFeedTotal": "168",
@@ -866,7 +866,7 @@
         "id": 1783044466878
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-02",
         "totalOpTime": "120",
         "autoFeedTotal": "62",
@@ -901,7 +901,7 @@
         "id": 1783044542473
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-06-29",
         "totalOpTime": "340",
         "autoFeedTotal": "93",
@@ -946,7 +946,7 @@
         "id": 1783050867602
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-06-30",
         "totalOpTime": "280",
         "autoFeedTotal": "63",
@@ -968,7 +968,7 @@
         "issues": [
           {
             "category": "系统故障",
-            "reason": "静态自检失败（本体问题，车锁死了。已反馈长安重工，暂无回应）",
+            "reason": "静态自检失败（本体问题，车锁死了。已反馈示例设备厂商，暂无回应）",
             "faultType": "本体故障",
             "takeoverDuration": 30,
             "manualFeedCount": 0,
@@ -981,7 +981,7 @@
         "id": 1783050882210
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-02",
         "totalOpTime": "633",
         "autoFeedTotal": "83",
@@ -1056,7 +1056,7 @@
         "id": 1783051457167
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-03",
         "totalOpTime": "464",
         "autoFeedTotal": "135",
@@ -1091,7 +1091,7 @@
         "id": 1783306208916
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-05",
         "totalOpTime": "380",
         "autoFeedTotal": "129",
@@ -1146,7 +1146,7 @@
         "id": 1783306223429
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-04",
         "totalOpTime": "900",
         "autoFeedTotal": "67",
@@ -1181,7 +1181,7 @@
         "id": 1783306342342
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-03",
         "totalOpTime": "657",
         "autoFeedTotal": "76",
@@ -1236,7 +1236,7 @@
         "id": 1783306534743
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-04",
         "totalOpTime": "717",
         "autoFeedTotal": "107",
@@ -1281,7 +1281,7 @@
         "id": 1783306894912
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-03",
         "totalOpTime": "410",
         "autoFeedTotal": "79",
@@ -1316,7 +1316,7 @@
         "id": 1783307579748
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-03",
         "totalOpTime": "510",
         "autoFeedTotal": "149",
@@ -1342,25 +1342,25 @@
     ],
     "aiAnalysis": null,
     "siteCards": {
-      "104": {
+      "演示站A": {
         "analysis": "共运营6天，<span style=\"color:#16a34a\">有效运营56.8小时</span>，<span style=\"color:#16a34a\">累计上料784次</span>（自动化707次；另外手动上料77次，自动化异常19次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（92.29%）</span>、<span style=\"color:#16a34a\">生产任务接管率（83.99%）</span>、<span style=\"color:#f59e0b\">任务成功率（97.38%）</span>、<span style=\"color:#16a34a\">异常任务远程恢复率（52.63%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>、<span style=\"color:#16a34a\">自动化生产方量覆盖率（83.99%）</span>、<span style=\"color:#f59e0b\">人效比（91.66%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
-        "image": "/report-images/1783680086107_104.png"
+        "image": "/report-images/1783680086107_演示站A.png"
       },
-      "兴发": {
+      "演示站F": {
         "analysis": "共运营6天，<span style=\"color:#dc2626\">有效运营66.8小时</span>，<span style=\"color:#16a34a\">累计上料555次</span>（自动化513次；另外手动上料42次，自动化异常15次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（90.80%）</span>、<span style=\"color:#16a34a\">生产任务接管率（92.27%）</span>、<span style=\"color:#16a34a\">任务成功率（97.16%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>、<span style=\"color:#16a34a\">自动化生产方量覆盖率（92.27%）</span>\n未达标指标：<span style=\"color:#dc2626\">异常任务远程恢复率（20.00%）</span>、<span style=\"color:#dc2626\">人效比（54.85%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
-        "image": "/report-images/1783680086107_兴发.png"
+        "image": "/report-images/1783680086107_演示站F.png"
       },
-      "甘肃路桥": {
+      "演示站H": {
         "analysis": "共运营3天，<span style=\"color:#dc2626\">有效运营21.8小时</span>，<span style=\"color:#dc2626\">累计上料80次</span>（自动化60次；另外手动上料20次，自动化异常12次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（88.07%）</span>\n未达标指标：<span style=\"color:#dc2626\">生产任务接管率（52.38%）</span>、<span style=\"color:#dc2626\">任务成功率（83.33%）</span>、<span style=\"color:#dc2626\">异常任务远程恢复率（66.67%）</span>、<span style=\"color:#dc2626\">生产时长覆盖率（81.27%）</span>、<span style=\"color:#dc2626\">自动化生产方量覆盖率（42.57%）</span>、<span style=\"color:#dc2626\">人效比（64.72%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
-        "image": "/report-images/1783680086107_甘肃路桥.png"
+        "image": "/report-images/1783680086107_演示站H.png"
       },
-      "嘉兴": {
+      "演示站B": {
         "analysis": "共运营6天，<span style=\"color:#dc2626\">有效运营54.1小时</span>，<span style=\"color:#16a34a\">累计上料595次</span>（自动化595次；另外手动上料0次，自动化异常11次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（94.22%）</span>、<span style=\"color:#16a34a\">生产任务接管率（100.00%）</span>、<span style=\"color:#16a34a\">任务成功率（98.18%）</span>、<span style=\"color:#16a34a\">异常任务远程恢复率（90.91%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（99.64%）</span>、<span style=\"color:#16a34a\">自动化生产方量覆盖率（99.64%）</span>、<span style=\"color:#16a34a\">人效比（78.95%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
-        "image": "/report-images/1783680086107_嘉兴.png"
+        "image": "/report-images/1783680086107_演示站B.png"
       },
-      "波然": {
+      "演示站I": {
         "analysis": "共运营5天，<span style=\"color:#dc2626\">有效运营42.5小时</span>，<span style=\"color:#16a34a\">累计上料367次</span>（自动化367次；另外手动上料0次，自动化异常3次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（92.64%）</span>、<span style=\"color:#16a34a\">生产任务接管率（100.00%）</span>、<span style=\"color:#16a34a\">任务成功率（99.19%）</span>、<span style=\"color:#16a34a\">异常任务远程恢复率（66.67%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>、<span style=\"color:#16a34a\">自动化生产方量覆盖率（100.00%）</span>\n未达标指标：<span style=\"color:#dc2626\">人效比（65.47%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
-        "image": "/report-images/1783680086107_波然.png"
+        "image": "/report-images/1783680086107_演示站I.png"
       }
     },
     "createdAt": "2026-07-10 18:41:26",
@@ -1885,7 +1885,7 @@
         "c": "rpt-na",
         "s": ""
       },
-      "104": {
+      "演示站A": {
         "t": "92.27%",
         "c": "rpt-v rpt-hit",
         "s": ""
@@ -3166,7 +3166,7 @@
         "s": ""
       }
     },
-    "analysis": "1.运营概况：本周共运营5个站点，分别为104、兴发、甘肃路桥、嘉兴、波然。本周总运营时长较前一周期增加25.6h，AI时长接管率、任务成功率、生产时长覆盖率、自动化生产方量覆盖率等关键指标整体达标；但异常任务远程恢复率未达标。主要问题集中在甘肃路桥站生产任务接管率与任务成功率偏低、兴发站远程恢复率低至20%，拉低整体水平；（具体原因待补充）<br>2.总运营时间：<span style=\"font-weight:700;color:#dc2626\">210.5h</span>，同比增加<span style=\"font-weight:700;color:#dc2626\">25.6h</span>，主要受本周运营天数未变，但单站作业强度提升影响；（具体原因待补充）；<br>3.总上料数：累计<span style=\"font-weight:700\">2,381次</span>（自动化2,242次，含自动生产1,557次、测试685次；另外手动上料139次），自动化上料同比增加963次，自动生产上料同比增加616次，手动上料同比减少248次，整体自动化作业占比大幅提升；<br>4.总AI时长接管率：<span style=\"font-weight:700;color:#16a34a\">91.97%</span>，同比提升<span style=\"font-weight:700;color:#16a34a\">15.99%</span>。整体达到目标（92%），本周AI接管表现整体较好，各站普遍达到或接近目标；（具体原因待补充）；<br>5.总生产任务接管率：<span style=\"font-weight:700;color:#16a34a\">91.80%</span>，同比提升<span style=\"font-weight:700;color:#16a34a\">29.56%</span>。整体未达到目标（92%），主要受甘肃路桥任务接管率52.38%及104站83.99%未达标拖累；（具体原因待补充）；<br>6.总任务成功率：<span style=\"font-weight:700;color:#16a34a\">97.39%</span>，同比提升<span style=\"font-weight:700;color:#16a34a\">3.64%</span>。整体达到目标（96%），本周任务执行稳定性较前一周期改善；虽甘肃路桥成功率83.33%偏低拉低整体，但仍达标；（具体原因待补充）；<br>7.总异常任务远程恢复率：<span style=\"font-weight:700;color:#dc2626\">55%</span>，同比下降<span style=\"font-weight:700;color:#dc2626\">14.91%</span>。整体未达到目标（60%），主要受兴发站数量较少、远程恢复率仅20%及甘肃路桥66.67%未达标影响，异常较少时比例波动明显；（具体原因待补充）；<br>8.总生产时长覆盖率：<span style=\"font-weight:700;color:#16a34a\">98.35%</span>，同比下降<span style=\"font-weight:700;color:#16a34a\">0.01%</span>，整体达到目标（90%）。各生产站点整体覆盖情况较好，仅甘肃路桥81.27%未达标；（具体原因待补充）；<br>9.自动化生产方量覆盖率：<span style=\"font-weight:700;color:#16a34a\">90.29%</span>，同比提升<span style=\"font-weight:700;color:#16a34a\">29.55%</span>，整体达到目标（85%）。本周自动化生产方量为4,359.6方，同比增加1,724.8方，自动化替代人工效果显著提升；（具体原因待补充）；<br>10.故障及分布：故障频次<span style=\"font-weight:700\">0.11次/h</span>，同比改善<span style=\"font-weight:700\">0.05次/h</span>，故障频次较前一周期下降。一级故障占比为4.17%，主要由波然站20%一级故障占比拉高，其余站点均为0%；（故障明细与分布待补充）。",
+    "analysis": "1.运营概况：本周共运营5个站点，分别为演示站A、演示站F、演示站H、演示站B、演示站I。本周总运营时长较前一周期增加25.6h，AI时长接管率、任务成功率、生产时长覆盖率、自动化生产方量覆盖率等关键指标整体达标；但异常任务远程恢复率未达标。主要问题集中在演示站H站生产任务接管率与任务成功率偏低、演示站F站远程恢复率低至20%，拉低整体水平；（具体原因待补充）<br>2.总运营时间：<span style=\"font-weight:700;color:#dc2626\">210.5h</span>，同比增加<span style=\"font-weight:700;color:#dc2626\">25.6h</span>，主要受本周运营天数未变，但单站作业强度提升影响；（具体原因待补充）；<br>3.总上料数：累计<span style=\"font-weight:700\">2,381次</span>（自动化2,242次，含自动生产1,557次、测试685次；另外手动上料139次），自动化上料同比增加963次，自动生产上料同比增加616次，手动上料同比减少248次，整体自动化作业占比大幅提升；<br>4.总AI时长接管率：<span style=\"font-weight:700;color:#16a34a\">91.97%</span>，同比提升<span style=\"font-weight:700;color:#16a34a\">15.99%</span>。整体达到目标（92%），本周AI接管表现整体较好，各站普遍达到或接近目标；（具体原因待补充）；<br>5.总生产任务接管率：<span style=\"font-weight:700;color:#16a34a\">91.80%</span>，同比提升<span style=\"font-weight:700;color:#16a34a\">29.56%</span>。整体未达到目标（92%），主要受演示站H任务接管率52.38%及演示站A站83.99%未达标拖累；（具体原因待补充）；<br>6.总任务成功率：<span style=\"font-weight:700;color:#16a34a\">97.39%</span>，同比提升<span style=\"font-weight:700;color:#16a34a\">3.64%</span>。整体达到目标（96%），本周任务执行稳定性较前一周期改善；虽演示站H成功率83.33%偏低拉低整体，但仍达标；（具体原因待补充）；<br>7.总异常任务远程恢复率：<span style=\"font-weight:700;color:#dc2626\">55%</span>，同比下降<span style=\"font-weight:700;color:#dc2626\">14.91%</span>。整体未达到目标（60%），主要受演示站F站数量较少、远程恢复率仅20%及演示站H66.67%未达标影响，异常较少时比例波动明显；（具体原因待补充）；<br>8.总生产时长覆盖率：<span style=\"font-weight:700;color:#16a34a\">98.35%</span>，同比下降<span style=\"font-weight:700;color:#16a34a\">0.01%</span>，整体达到目标（90%）。各生产站点整体覆盖情况较好，仅演示站H81.27%未达标；（具体原因待补充）；<br>9.自动化生产方量覆盖率：<span style=\"font-weight:700;color:#16a34a\">90.29%</span>，同比提升<span style=\"font-weight:700;color:#16a34a\">29.55%</span>，整体达到目标（85%）。本周自动化生产方量为4,359.6方，同比增加1,724.8方，自动化替代人工效果显著提升；（具体原因待补充）；<br>10.故障及分布：故障频次<span style=\"font-weight:700\">0.11次/h</span>，同比改善<span style=\"font-weight:700\">0.05次/h</span>，故障频次较前一周期下降。一级故障占比为4.17%，主要由演示站I站20%一级故障占比拉高，其余站点均为0%；（故障明细与分布待补充）。",
     "otherMatters": "<strong style=\"color: var(--t1); font-family: inherit;\">1.V1.1.16&amp;V1.2.23测试</strong><br>\n"
   },
   {
@@ -3197,7 +3197,7 @@
     },
     "siteDetails": [
       {
-        "station": "兴发",
+        "station": "演示站F",
         "opTime": 58.13333333333333,
         "autoFeed": 415,
         "autoProdFeed": 409,
@@ -3221,7 +3221,7 @@
         "_f3": 0
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "opTime": 33,
         "autoFeed": 367,
         "autoProdFeed": 46,
@@ -3245,7 +3245,7 @@
         "_f3": 0
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "opTime": 27.183333333333334,
         "autoFeed": 405,
         "autoProdFeed": 260,
@@ -3269,7 +3269,7 @@
         "_f3": 0
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "opTime": 24.533333333333335,
         "autoFeed": 241,
         "autoProdFeed": 241,
@@ -3293,7 +3293,7 @@
         "_f3": 0
       },
       {
-        "station": "宜涪",
+        "station": "演示站C",
         "opTime": 3.792333333333333,
         "autoFeed": 47,
         "autoProdFeed": 47,
@@ -3319,7 +3319,7 @@
     ],
     "globalTargets": {},
     "siteTargets": {
-      "104": {
+      "演示站A": {
         "opHours": 50.0,
         "autoFeed": 600.0,
         "aiRate": 0.9,
@@ -3330,7 +3330,7 @@
         "autoVolCov": 0.72,
         "effRatio": 0.9
       },
-      "兴发": {
+      "演示站F": {
         "opHours": 60.0,
         "autoFeed": 600.0,
         "aiRate": 0.86,
@@ -3341,7 +3341,7 @@
         "autoVolCov": 0.85,
         "effRatio": 0.45
       },
-      "波然": {
+      "演示站I": {
         "opHours": 30.0,
         "autoFeed": 400.0,
         "aiRate": 0.86,
@@ -3352,7 +3352,7 @@
         "autoVolCov": 0.81,
         "effRatio": 0.65
       },
-      "嘉兴": {
+      "演示站B": {
         "opHours": 40.0,
         "autoFeed": 400.0,
         "aiRate": 0.8,
@@ -3363,7 +3363,7 @@
         "autoVolCov": 0.85,
         "effRatio": 0.8
       },
-      "宜涪": {
+      "演示站C": {
         "opHours": "500",
         "autoFeed": "5000",
         "aiRate": 0.8,
@@ -3377,7 +3377,7 @@
     },
     "records": [
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-06",
         "totalOpTime": "684",
         "autoFeedTotal": "98",
@@ -3442,7 +3442,7 @@
         "id": 1783409815528
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-06",
         "totalOpTime": "520",
         "autoFeedTotal": "94",
@@ -3464,7 +3464,7 @@
         "issues": [
           {
             "category": "系统故障",
-            "reason": "出现故障（长安重工排查中，本体丹佛斯阀数值跳变）",
+            "reason": "出现故障（示例设备厂商排查中，本体示例液压组件阀数值跳变）",
             "faultType": "本体故障",
             "takeoverDuration": 6,
             "manualFeedCount": 0,
@@ -3477,7 +3477,7 @@
         "id": 1783409833073
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-07",
         "totalOpTime": "215",
         "autoFeedTotal": "76",
@@ -3522,7 +3522,7 @@
         "id": 1783477664260
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-07",
         "totalOpTime": "686",
         "autoFeedTotal": "90",
@@ -3577,7 +3577,7 @@
         "id": 1783477702003
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-07",
         "totalOpTime": "360",
         "autoFeedTotal": "46",
@@ -3599,7 +3599,7 @@
         "issues": [
           {
             "category": "系统故障",
-            "reason": "发任务，车不动 （丹佛斯，本体故障，具体原因未知）",
+            "reason": "发任务，车不动 （示例液压组件，本体故障，具体原因未知）",
             "faultType": "本体故障",
             "takeoverDuration": 17,
             "manualFeedCount": 0,
@@ -3642,7 +3642,7 @@
         "id": 1783477720662
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-07",
         "totalOpTime": "618",
         "autoFeedTotal": "83",
@@ -3707,7 +3707,7 @@
         "id": 1783566140459
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-06",
         "totalOpTime": "502",
         "autoFeedTotal": "116",
@@ -3822,7 +3822,7 @@
         "id": 1783566177899
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-08",
         "totalOpTime": "450",
         "autoFeedTotal": "111",
@@ -3867,7 +3867,7 @@
         "id": 1783566958198
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-08",
         "totalOpTime": "630",
         "autoFeedTotal": "112",
@@ -3891,7 +3891,7 @@
         "id": 1783566988878
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-08",
         "totalOpTime": "672",
         "autoFeedTotal": "99",
@@ -3936,7 +3936,7 @@
         "id": 1783567003774
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-08",
         "totalOpTime": "350",
         "autoFeedTotal": "79",
@@ -3971,7 +3971,7 @@
         "id": 1783567021486
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-09",
         "totalOpTime": "364",
         "autoFeedTotal": "77",
@@ -4066,7 +4066,7 @@
         "id": 1783653540494
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-09",
         "totalOpTime": "684",
         "autoFeedTotal": "91",
@@ -4121,7 +4121,7 @@
         "id": 1783653600703
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-09",
         "totalOpTime": "480",
         "autoFeedTotal": "93",
@@ -4143,7 +4143,7 @@
         "issues": [
           {
             "category": "系统故障",
-            "reason": "提示装载机故障暂停作业（长安重工排查中）",
+            "reason": "提示装载机故障暂停作业（示例设备厂商排查中）",
             "faultType": "本体故障",
             "takeoverDuration": 60,
             "manualFeedCount": 0,
@@ -4166,7 +4166,7 @@
         "id": 1783653635749
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-09",
         "totalOpTime": "224",
         "autoFeedTotal": "46",
@@ -4211,7 +4211,7 @@
         "id": 1783653707822
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-10",
         "totalOpTime": "100",
         "autoFeedTotal": "25",
@@ -4246,7 +4246,7 @@
         "id": 1783911327791
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-10",
         "totalOpTime": "270",
         "autoFeedTotal": "55",
@@ -4270,7 +4270,7 @@
         "id": 1783911373303
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-10",
         "totalOpTime": "762",
         "autoFeedTotal": "37",
@@ -4325,7 +4325,7 @@
         "id": 1783911388207
       },
       {
-        "station": "宜涪",
+        "station": "演示站C",
         "date": "2026-07-09",
         "totalOpTime": "118.42",
         "autoFeedTotal": "26",
@@ -4349,7 +4349,7 @@
         "id": 1783915329086
       },
       {
-        "station": "宜涪",
+        "station": "演示站C",
         "date": "2026-07-11",
         "totalOpTime": "84.78",
         "autoFeedTotal": "17",
@@ -4373,7 +4373,7 @@
         "id": 1783915409385
       },
       {
-        "station": "宜涪",
+        "station": "演示站C",
         "date": "2026-07-12",
         "totalOpTime": "24.34",
         "autoFeedTotal": "4",
@@ -4399,25 +4399,25 @@
     ],
     "aiAnalysis": null,
     "siteCards": {
-      "104": {
+      "演示站A": {
         "analysis": "共运营5天，<span style=\"color:#dc2626\">有效运营41.9小时</span>，<span style=\"color:#dc2626\">累计上料520次</span>（自动化405次；另外手动上料115次，自动化异常10次）；\n达标指标：<font color=\"#16a34a\">任务成功率（97.59%）、生产时长覆盖率（100.00%）</font>\n未达标指标：<span style=\"color:#dc2626\">AI时长接管率（79.03%）</span>、<span style=\"color:#dc2626\">生产任务接管率（69.33%）</span>、<span style=\"color:#dc2626\">异常任务远程恢复率（50.00%）</span>、<span style=\"color:#dc2626\">自动化生产方量覆盖率（69.33%）</span>、<span style=\"color:#dc2626\">人效比（89.90%）</span>\n<p>手动接管及异常原因：1.避让进料车/私家车；2.定位导航故障/卸料点上方卡住；3.清理料斗和撒料；4.转向传感器故障；5.软件占用高，传感器低频。<br>本周重点：继续车上接管生产运营，本周完成堆料效果、效率测试，支撑16+23版本测试，并完成低成本远控改造。<br></p>",
-        "image": "/report-images/1783935297778_104.png"
+        "image": "/report-images/1783935297778_演示站A.png"
       },
-      "兴发": {
+      "演示站F": {
         "analysis": "共运营5天，<span style=\"color:#dc2626\">有效运营48.4小时</span>，<span style=\"color:#dc2626\">累计上料453次</span>（自动化415次；另外手动上料38次，自动化异常6次）；\n达标指标：<font color=\"#16a34a\">生产任务接管率（91.50%）</font>、<span style=\"color:#16a34a\">任务成功率（98.57%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>、<span style=\"color:#16a34a\">自动化生产方量覆盖率（91.50%）</span>\n未达标指标：<span style=\"color:#f59e0b\">AI时长接管率（85.01%）</span>、<span style=\"color:#dc2626\">异常任务远程恢复率（50.00%）</span>、<span style=\"color:#dc2626\">人效比（43.72%）</span>\n<p>手动接管及异常原因：1.避让进料车；2.整理溢料；3.溢料避障；4.网络故障（检修中）；5.算法路线避障。<br>本周重点：料斗完成摄像头加装，确定上料数据统计及上报方案，并推进安全员下车。<br></p>",
-        "image": "/report-images/1783935297778_兴发.png"
+        "image": "/report-images/1783935297778_演示站F.png"
       },
-      "波然": {
-        "analysis": "共运营5天，<span style=\"color:#16a34a\">有效运营36.4小时</span>，<span style=\"color:#dc2626\">累计上料378次</span>（自动化367次；另外手动上料11次，自动化异常13次）；\n达标指标：<font color=\"#16a34a\">AI时长接管率（85.96%）、生产任务接管率（80.70%）、任务成功率（96.58%）、生产时长覆盖率（100.00%）、自动化生产方量覆盖率（80.70%）</font>\n未达标指标：<span style=\"color:#dc2626\">异常任务远程恢复率（46.15%）</span>、<span style=\"color:#dc2626\">人效比（62.12%）</span>\n<p>手动接管及异常原因：1.避让进料车；2.丹佛斯阀等本体故障；3.向前激光故障；4.卸料失败（已解决）。<br>本周重点：继续车上接管生产，完成料斗标定，修复硬件问题。<br></p>",
-        "image": "/report-images/1783935297778_波然.png"
+      "演示站I": {
+        "analysis": "共运营5天，<span style=\"color:#16a34a\">有效运营36.4小时</span>，<span style=\"color:#dc2626\">累计上料378次</span>（自动化367次；另外手动上料11次，自动化异常13次）；\n达标指标：<font color=\"#16a34a\">AI时长接管率（85.96%）、生产任务接管率（80.70%）、任务成功率（96.58%）、生产时长覆盖率（100.00%）、自动化生产方量覆盖率（80.70%）</font>\n未达标指标：<span style=\"color:#dc2626\">异常任务远程恢复率（46.15%）</span>、<span style=\"color:#dc2626\">人效比（62.12%）</span>\n<p>手动接管及异常原因：1.避让进料车；2.示例液压组件阀等本体故障；3.向前激光故障；4.卸料失败（已解决）。<br>本周重点：继续车上接管生产，完成料斗标定，修复硬件问题。<br></p>",
+        "image": "/report-images/1783935297778_演示站I.png"
       },
-      "嘉兴": {
-        "analysis": "共运营3天，<font color=\"#dc2626\">有效运营58.1小时，</font><span style=\"color:#dc2626\">累计上料243次</span>（自动化241次；另外手动上料2次，自动化异常7次）；\n达标指标：<font color=\"#16a34a\">生产任务接管率（99.18%）、任务成功率（97.18%）、生产时长覆盖率（100.00%）、自动化生产方量覆盖率（99.18%）</font>\n未达标指标：<span style=\"color:#dc2626\">AI时长接管率（79.76%）</span>、<span style=\"color:#dc2626\">异常任务远程恢复率（71.43%）</span>、<span style=\"color:#dc2626\">人效比（76.83%）</span>\n<p>手动接管及异常原因：1.激光等多传感器故障；2.避让进料车；3.自检失败；4.整理余料；5.仓内转向失败。<br>本周重点：继续远程监管生产，对站内师傅进行远程监管培训，同时验证激光绕障方案。<br></p>",
-        "image": "/report-images/1783935297778_嘉兴.png"
+      "演示站B": {
+        "analysis": "共运营3天，<font color=\"#dc2626\">有效运营58.1小时，</font><span style=\"color:#dc2626\">累计上料243次</span>（自动化241次；另外手动上料2次，自动化异常7次）；\n达标指标：<font color=\"#16a34a\">生产任务接管率（99.18%）、任务成功率（97.18%）、生产时长覆盖率（100.00%）、自动化生产方量覆盖率（99.18%）</font>\n未达标指标：<span style=\"color:#dc2626\">AI时长接管率（79.76%）</span>、<span style=\"color:#dc2626\">异常任务远程恢复率（71.43%）</span>、<span style=\"color:#dc2626\">人效比（76.83%）</span>\n<p>手动接管及异常原因：1.激光等多传感器故障；2.避让进料车；3.自检失败；4.整理余料；5.仓内转向失败。<br>本周重点：继续远程监管生产，对站内人员进行远程监管培训，同时验证激光绕障方案。<br></p>",
+        "image": "/report-images/1783935297778_演示站B.png"
       },
-      "宜涪": {
+      "演示站C": {
         "analysis": "共运营3天，有效运营7.2小时，累计上料47次（自动化47次；另外手动上料0次，自动化异常7次）；\n指标：AI时长接管率（75.20%）、生产任务接管率（100%）、任务成功率（87.04%）、异常任务远程恢复率（100%）、生产时长覆盖率（100.00%）、自动化生产方量覆盖率（100%）、人效比（95.55%）\n本周重点：上周客户进行了自主的无人作业，本周针对客户使用进行回访。\n",
-        "image": "/report-images/1783935297778_宜涪.png"
+        "image": "/report-images/1783935297778_演示站C.png"
       }
     },
     "otherMatters": "<p>1.v1.2.23+v1.1.16测试，低成本远控测试</p><p>\n</p><br>",
@@ -4943,7 +4943,7 @@
         "c": "rpt-na",
         "s": ""
       },
-      "104": {
+      "演示站A": {
         "t": "80.70%",
         "c": "rpt-v rpt-miss",
         "s": "color: rgb(22, 163, 74);"
@@ -6224,7 +6224,7 @@
         "s": ""
       }
     },
-    "analysis": "1.运营概况：本周共运营5个站点，分别为兴发、波然、104、嘉兴、宜涪。受本体/传感器故障、台风影响，<span style=\"color: var(--t1); font-family: inherit;\">运营时长和自动上料数相较上周有所减少，AI接管率有所下降；但异常任务恢复率有所回升，且故障频次达到历史新低（0.10次/h），整体运营稳定性有所改善。同时宜涪站交付后，迎来客户首次使用装载机无人作业。</span><div>2.总运营时间：<span style=\"font-weight:700;color:#dc2626\">146.6h</span>，同比减少63.9h，<span style=\"color: var(--t1); font-family: inherit;\">，主要由于激光雷达故障导致嘉兴站运营天数减少、路桥站仍未恢复运营和台风天气影响，导致运营时长总体上有所减少；</span><br>3.总上料数：累计<span style=\"font-weight:700\">1,641次</span>（自动化1,475次，含自动生产1,003次、测试472次；另外手动上料166次），自动化上料同比减少767次，自动生产上料同比减少554次；<br>4.总AI时长接管率：<span style=\"font-weight: 700;\"><font color=\"#dc2626\">82.99%</font></span>，同比下降8.98%。整体未达到目标（85%），<span style=\"color: var(--t1); font-family: inherit;\">主要问题来源于兴发站突发网络故障，波然站多发本体故障和多站点进料/溢料导致的手动避障</span>；<br>5.总生产任务接管率：<span style=\"font-weight:700;color:#16a34a\">85.80%</span>，同比下降6.00%。整体达到目标（85%），<span style=\"color: var(--t1); font-family: inherit;\">主要受波然站（80.70%）和104站（71.04%）本周接管时长较高影响</span>；<br>6.总任务成功率：<span style=\"font-weight:700;color:#16a34a\">97.17%</span>，同比微降0.23%。整体达到目标（95%），本周任务执行稳定性与前一周期基本持平；<br>7.总异常任务远程恢复率：<span style=\"font-weight:700;color:#16a34a\">60.47%</span>，同比提升5.47%。整体达到目标（60%），<span style=\"color: var(--t1); font-family: inherit;\">本周异常任务较少，异常恢复率也保持在稳定水平</span>；<br>8.总生产时长覆盖率：<span style=\"font-weight:700;color:#16a34a\">100%</span>，同比提升1.65%，整体达到目标（90%）。各生产站点整体覆盖情况较好；<br>9.自动化生产方量覆盖率：<span style=\"font-weight:700;color:#16a34a\">85.80%</span>，同比下降4.49%，整体达到目标（80%）。本周自动化生产方量为2,808.4方，同比减少1,551.2方；<br>10.故障及分布：故障频次<span style=\"font-weight:700\">0.10次/h</span>，同比改善<span style=\"font-weight:700\">0.01次/h</span>，<span style=\"color: var(--t1); font-family: inherit;\">故障频次较前一周期下降。一级故障占比为0%。全站二级故障占比100%，共计18次；本体故障6次（丹佛斯阀数值跳变，整车控制器、直流电机故障等），其中波然站本体故障5次，影响明显；算法故障5次（定位故障、轨迹曲率过大、初始末端速度小等问题导致）；传感器故障5次（向前激光、转向传感器故障）；网络故障1次；偶发软件占用资源过高故障1次。</span>\n</div>"
+    "analysis": "1.运营概况：本周共运营5个站点，分别为演示站F、演示站I、演示站A、演示站B、演示站C。受本体/传感器故障、台风影响，<span style=\"color: var(--t1); font-family: inherit;\">运营时长和自动上料数相较上周有所减少，AI接管率有所下降；但异常任务恢复率有所回升，且故障频次达到历史新低（0.10次/h），整体运营稳定性有所改善。同时演示站C站交付后，迎来客户首次使用装载机无人作业。</span><div>2.总运营时间：<span style=\"font-weight:700;color:#dc2626\">146.6h</span>，同比减少63.9h，<span style=\"color: var(--t1); font-family: inherit;\">，主要由于激光雷达故障导致演示站B站运营天数减少、路桥站仍未恢复运营和台风天气影响，导致运营时长总体上有所减少；</span><br>3.总上料数：累计<span style=\"font-weight:700\">1,641次</span>（自动化1,475次，含自动生产1,003次、测试472次；另外手动上料166次），自动化上料同比减少767次，自动生产上料同比减少554次；<br>4.总AI时长接管率：<span style=\"font-weight: 700;\"><font color=\"#dc2626\">82.99%</font></span>，同比下降8.98%。整体未达到目标（85%），<span style=\"color: var(--t1); font-family: inherit;\">主要问题来源于演示站F站突发网络故障，演示站I站多发本体故障和多站点进料/溢料导致的手动避障</span>；<br>5.总生产任务接管率：<span style=\"font-weight:700;color:#16a34a\">85.80%</span>，同比下降6.00%。整体达到目标（85%），<span style=\"color: var(--t1); font-family: inherit;\">主要受演示站I站（80.70%）和演示站A站（71.04%）本周接管时长较高影响</span>；<br>6.总任务成功率：<span style=\"font-weight:700;color:#16a34a\">97.17%</span>，同比微降0.23%。整体达到目标（95%），本周任务执行稳定性与前一周期基本持平；<br>7.总异常任务远程恢复率：<span style=\"font-weight:700;color:#16a34a\">60.47%</span>，同比提升5.47%。整体达到目标（60%），<span style=\"color: var(--t1); font-family: inherit;\">本周异常任务较少，异常恢复率也保持在稳定水平</span>；<br>8.总生产时长覆盖率：<span style=\"font-weight:700;color:#16a34a\">100%</span>，同比提升1.65%，整体达到目标（90%）。各生产站点整体覆盖情况较好；<br>9.自动化生产方量覆盖率：<span style=\"font-weight:700;color:#16a34a\">85.80%</span>，同比下降4.49%，整体达到目标（80%）。本周自动化生产方量为2,808.4方，同比减少1,551.2方；<br>10.故障及分布：故障频次<span style=\"font-weight:700\">0.10次/h</span>，同比改善<span style=\"font-weight:700\">0.01次/h</span>，<span style=\"color: var(--t1); font-family: inherit;\">故障频次较前一周期下降。一级故障占比为0%。全站二级故障占比100%，共计18次；本体故障6次（示例液压组件阀数值跳变，整车控制器、直流电机故障等），其中演示站I站本体故障5次，影响明显；算法故障5次（定位故障、轨迹曲率过大、初始末端速度小等问题导致）；传感器故障5次（向前激光、转向传感器故障）；网络故障1次；偶发软件占用资源过高故障1次。</span>\n</div>"
   },
   {
     "id": 1784528377569,
@@ -6254,7 +6254,7 @@
     },
     "siteDetails": [
       {
-        "station": "104",
+        "station": "演示站A",
         "opTime": 51.483333333333334,
         "autoFeed": 639,
         "autoProdFeed": 91,
@@ -6278,7 +6278,7 @@
         "_f3": 1
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "opTime": 61.3,
         "autoFeed": 507,
         "autoProdFeed": 482,
@@ -6302,7 +6302,7 @@
         "_f3": 0
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "opTime": 37.166666666666664,
         "autoFeed": 386,
         "autoProdFeed": 29,
@@ -6326,7 +6326,7 @@
         "_f3": 0
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "opTime": 64.71666666666667,
         "autoFeed": 664,
         "autoProdFeed": 543,
@@ -6352,7 +6352,7 @@
     ],
     "globalTargets": {},
     "siteTargets": {
-      "104": {
+      "演示站A": {
         "opHours": 55,
         "autoFeed": 650,
         "aiRate": 0.9,
@@ -6363,7 +6363,7 @@
         "autoVolCov": 0.72,
         "effRatio": 0.9
       },
-      "嘉兴": {
+      "演示站B": {
         "opHours": 65,
         "autoFeed": 550,
         "aiRate": 0.8,
@@ -6374,7 +6374,7 @@
         "autoVolCov": 0.8,
         "effRatio": 0.8
       },
-      "波然": {
+      "演示站I": {
         "opHours": 40,
         "autoFeed": 400,
         "aiRate": 0.81,
@@ -6385,7 +6385,7 @@
         "autoVolCov": 0.76,
         "effRatio": 0.65
       },
-      "兴发": {
+      "演示站F": {
         "opHours": 65,
         "autoFeed": 700,
         "aiRate": 0.9,
@@ -6399,7 +6399,7 @@
     },
     "records": [
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-13",
         "totalOpTime": "567",
         "autoFeedTotal": "118",
@@ -6454,7 +6454,7 @@
         "id": 1784080268693
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-13",
         "totalOpTime": "521",
         "autoFeedTotal": "34",
@@ -6476,7 +6476,7 @@
         "issues": [
           {
             "category": "问题调试",
-            "reason": "剑鸿调试铲斗缷料的问题",
+            "reason": "技术人员调试铲斗缷料的问题",
             "faultType": "",
             "takeoverDuration": 176,
             "manualFeedCount": 0,
@@ -6519,7 +6519,7 @@
         "id": 1784080329853
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-13",
         "totalOpTime": "420",
         "autoFeedTotal": "85",
@@ -6564,7 +6564,7 @@
         "id": 1784080410484
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-14",
         "totalOpTime": "623",
         "autoFeedTotal": "54",
@@ -6599,7 +6599,7 @@
         "id": 1784081996683
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-14",
         "totalOpTime": "610",
         "autoFeedTotal": "99",
@@ -6634,7 +6634,7 @@
         "id": 1784082013605
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-14",
         "totalOpTime": "685",
         "autoFeedTotal": "89",
@@ -6689,7 +6689,7 @@
         "id": 1784082031201
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-14",
         "totalOpTime": "430",
         "autoFeedTotal": "97",
@@ -6713,7 +6713,7 @@
         "id": 1784082160465
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-15",
         "totalOpTime": "549",
         "autoFeedTotal": "75",
@@ -6758,7 +6758,7 @@
         "id": 1784180470938
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-15",
         "totalOpTime": "664",
         "autoFeedTotal": "99",
@@ -6803,7 +6803,7 @@
         "id": 1784180490267
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-15",
         "totalOpTime": "480",
         "autoFeedTotal": "95",
@@ -6838,7 +6838,7 @@
         "id": 1784180545380
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-13",
         "totalOpTime": "461",
         "autoFeedTotal": "28",
@@ -6893,7 +6893,7 @@
         "id": 1784186475772
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-16",
         "totalOpTime": "688",
         "autoFeedTotal": "81",
@@ -6928,7 +6928,7 @@
         "id": 1784257525926
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-16",
         "totalOpTime": "686",
         "autoFeedTotal": "125",
@@ -6973,7 +6973,7 @@
         "id": 1784257547670
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-16",
         "totalOpTime": "360",
         "autoFeedTotal": "86",
@@ -7008,7 +7008,7 @@
         "id": 1784257626409
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-16",
         "totalOpTime": "675",
         "autoFeedTotal": "34",
@@ -7043,7 +7043,7 @@
         "id": 1784257801048
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-17",
         "totalOpTime": "483",
         "autoFeedTotal": "115",
@@ -7088,7 +7088,7 @@
         "id": 1784526851755
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-18",
         "totalOpTime": "485",
         "autoFeedTotal": "205",
@@ -7143,7 +7143,7 @@
         "id": 1784526869482
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-17",
         "totalOpTime": "690",
         "autoFeedTotal": "69",
@@ -7165,7 +7165,7 @@
         "issues": [
           {
             "category": "问题调试",
-            "reason": "剑鸿调试3号线缷料问题",
+            "reason": "技术人员调试3号线缷料问题",
             "faultType": "",
             "takeoverDuration": 60,
             "manualFeedCount": 0,
@@ -7198,7 +7198,7 @@
         "id": 1784526912658
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-18",
         "totalOpTime": "350",
         "autoFeedTotal": "113",
@@ -7233,7 +7233,7 @@
         "id": 1784526929346
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-19",
         "totalOpTime": "270",
         "autoFeedTotal": "36",
@@ -7268,7 +7268,7 @@
         "id": 1784526952483
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-17",
         "totalOpTime": "721",
         "autoFeedTotal": "140",
@@ -7323,7 +7323,7 @@
         "id": 1784527045610
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-19",
         "totalOpTime": "666",
         "autoFeedTotal": "183",
@@ -7388,7 +7388,7 @@
         "id": 1784527073586
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-17",
         "totalOpTime": "540",
         "autoFeedTotal": "23",
@@ -7410,7 +7410,7 @@
         "issues": [
           {
             "category": "系统故障",
-            "reason": "PDU 故障   等长安重工来处理",
+            "reason": "PDU 故障   等示例设备厂商来处理",
             "faultType": "本体故障",
             "takeoverDuration": 240,
             "manualFeedCount": 0,
@@ -7433,7 +7433,7 @@
         "id": 1784527140330
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-19",
         "totalOpTime": "256",
         "autoFeedTotal": "113",
@@ -7470,21 +7470,21 @@
     ],
     "aiAnalysis": null,
     "siteCards": {
-      "104": {
+      "演示站A": {
         "analysis": "共运营6天，<span style=\"color:#16a34a\">有效运营51.5小时</span>，<span style=\"color:#16a34a\">累计上料698次</span>（自动化639次；另外手动上料59次，自动化异常9次）；\n达标指标：<font color=\"#16a34a\">AI时长接管率（91.78%）、任务成功率（98.61%）、生产时长覆盖率（100.00%）、人效比（91.65%）</font>\n未达标指标：<span style=\"color:#dc2626\">生产任务接管率（60.67%）</span>、<span style=\"color:#dc2626\">异常任务远程恢复率（44.44%）</span>、<span style=\"color:#dc2626\">自动化生产方量覆盖率（60.67%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
-        "image": "/report-images/1783911608725_104.png"
+        "image": "/report-images/1783911608725_演示站A.png"
       },
-      "嘉兴": {
+      "演示站B": {
         "analysis": "共运营7天，<span style=\"color:#16a34a\">有效运营61.3小时</span>，<span style=\"color:#16a34a\">累计上料617次</span>（自动化507次；另外手动上料110次，自动化异常32次）；\n达标指标：<span style=\"color:#16a34a\">异常任务远程恢复率（87.50%）</span>\n未达标指标：<span style=\"color:#dc2626\">AI时长接管率（66.20%）</span>、<span style=\"color:#dc2626\">生产任务接管率（81.42%）</span>、<font color=\"#f59e0b\">任务成功率（94.06%）</font>、<span style=\"color:#dc2626\">生产时长覆盖率（70.39%）</span>、<span style=\"color:#dc2626\">自动化生产方量覆盖率（57.31%）</span>、<span style=\"color:#dc2626\">人效比（73.09%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
-        "image": "/report-images/1783911608725_嘉兴.png"
+        "image": "/report-images/1783911608725_演示站B.png"
       },
-      "波然": {
+      "演示站I": {
         "analysis": "共运营5天，<span style=\"color:#16a34a\">有效运营37.2小时</span>，<span style=\"color:#dc2626\">累计上料398次</span>（自动化386次；另外手动上料12次，自动化异常4次）；\n达标指标：<font color=\"#16a34a\">任务成功率（98.97%）、异常任务远程恢复率（50.00%）、生产时长覆盖率（100.00%）</font>\n未达标指标：<span style=\"color:#dc2626\">AI时长接管率（78.03%）</span>、<span style=\"color:#dc2626\">生产任务接管率（70.73%）</span>、<span style=\"color:#dc2626\">自动化生产方量覆盖率（70.73%）</span>、<span style=\"color:#f59e0b\">人效比（64.55%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
-        "image": "/report-images/1783911608725_波然.png"
+        "image": "/report-images/1783911608725_演示站I.png"
       },
-      "兴发": {
+      "演示站F": {
         "analysis": "共运营6天，<span style=\"color:#16a34a\">有效运营64.7小时</span>，<span style=\"color:#16a34a\">累计上料688次</span>（自动化664次；另外手动上料24次，自动化异常13次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（91.68%）</span>、<span style=\"color:#16a34a\">生产任务接管率（95.77%）</span>、<span style=\"color:#16a34a\">任务成功率（98.08%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（98.39%）</span>、<span style=\"color:#16a34a\">自动化生产方量覆盖率（94.22%）</span>\n未达标指标：<span style=\"color:#dc2626\">异常任务远程恢复率（38.46%）</span>、<span style=\"color:#dc2626\">人效比（40.25%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
-        "image": "/report-images/1783911608725_兴发.png"
+        "image": "/report-images/1783911608725_演示站F.png"
       }
     },
     "otherMatters": "",
@@ -8010,7 +8010,7 @@
         "c": "rpt-v rpt-warn",
         "s": "color: rgb(22, 163, 74);"
       },
-      "104": {
+      "演示站A": {
         "t": "90.00%",
         "c": "rpt-na",
         "s": ""
@@ -9021,7 +9021,7 @@
         "s": ""
       }
     },
-    "analysis": "1.运营概况：本周共运营4个站点，分别为104、嘉兴、波然、兴发。本周总运营时长216.2h，同比增加69.5h；任务成功率、异常任务远程恢复率整体达标，但AI时长接管率81.50%未达目标85%，生产时长覆盖率89.29%未达目标90%，自动化生产方量覆盖率75.73%未达目标80%。主要问题集中在嘉兴站AI时长接管率偏低（66.20%）、生产时长覆盖率偏低（70.39%），以及波然站自动化生产方量覆盖率偏低（70.73%）。<br>2.总运营时间：<span style=\"font-weight:700;color:#16a34a\">216.2h</span>，同比增加<span style=\"font-weight:700;color:#16a34a\">69.5h</span>，主要受本周运营天数增加（24天 vs 前周期21天）及多站运营时长提升影响；（具体原因待补充）；<br>3.总上料数：累计<span style=\"font-weight:700\">2401次</span>（自动化2196次，含自动生产1145次、测试1051次；另外手动上料205次），自动化上料同比增加721次，自动生产上料同比增加142次，手动上料同比增加48次，整体自动化作业占比提升；<br>4.总AI时长接管率：<span style=\"font-weight:700;color:#f59e0b\">81.50%</span>，同比下降<span style=\"font-weight:700;color:#f59e0b\">1.50%</span>。整体未达到目标（85%），本周AI接管表现整体偏弱；主要受嘉兴站接管率仅66.20%拉低；（具体原因待补充）；<br>5.总生产任务接管率：<span style=\"font-weight:700;color:#16a34a\">84.81%</span>，同比下降<span style=\"font-weight:700;color:#16a34a\">1.65%</span>。整体未达到目标（86%），主要受自动化生产任务占比波动影响；（具体原因待补充）；<br>6.总任务成功率：<span style=\"font-weight:700;color:#16a34a\">97.43%</span>，同比提升<span style=\"font-weight:700;color:#16a34a\">0.26%</span>。整体达到目标（95%），本周任务执行稳定性较前一周期改善；<br>7.总异常任务远程恢复率：<span style=\"font-weight:700;color:#16a34a\">67.24%</span>，同比提升<span style=\"font-weight:700;color:#16a34a\">6.78%</span>。整体达到目标（65%），主要受部分站点异常数量较少、个别异常未能远程恢复影响；（具体原因待补充）；<br>8.总生产时长覆盖率：<span style=\"font-weight:700;color:#f59e0b\">89.29%</span>，同比下降<span style=\"font-weight:700;color:#f59e0b\">10.71%</span>，整体未达到目标（90%）。主要受嘉兴站覆盖率70.39%拖累；（具体原因待补充）；<br>9.自动化生产方量覆盖率：<span style=\"font-weight:700;color:#16a34a\">75.73%</span>，同比下降<span style=\"font-weight:700;color:#16a34a\">10.74%</span>，整体未达到目标（80%）。本周自动化生产方量为3206.0方，同比增加397.6方；（具体原因待补充）；<br>10.故障及分布：故障频次<span style=\"font-weight:700\">0.09次/h</span>，同比改善<span style=\"font-weight:700\">0.01次/h</span>，故障频次较前一周期下降。一级故障占比为0.00%；（故障明细与分布待补充）。"
+    "analysis": "1.运营概况：本周共运营4个站点，分别为演示站A、演示站B、演示站I、演示站F。本周总运营时长216.2h，同比增加69.5h；任务成功率、异常任务远程恢复率整体达标，但AI时长接管率81.50%未达目标85%，生产时长覆盖率89.29%未达目标90%，自动化生产方量覆盖率75.73%未达目标80%。主要问题集中在演示站B站AI时长接管率偏低（66.20%）、生产时长覆盖率偏低（70.39%），以及演示站I站自动化生产方量覆盖率偏低（70.73%）。<br>2.总运营时间：<span style=\"font-weight:700;color:#16a34a\">216.2h</span>，同比增加<span style=\"font-weight:700;color:#16a34a\">69.5h</span>，主要受本周运营天数增加（24天 vs 前周期21天）及多站运营时长提升影响；（具体原因待补充）；<br>3.总上料数：累计<span style=\"font-weight:700\">2401次</span>（自动化2196次，含自动生产1145次、测试1051次；另外手动上料205次），自动化上料同比增加721次，自动生产上料同比增加142次，手动上料同比增加48次，整体自动化作业占比提升；<br>4.总AI时长接管率：<span style=\"font-weight:700;color:#f59e0b\">81.50%</span>，同比下降<span style=\"font-weight:700;color:#f59e0b\">1.50%</span>。整体未达到目标（85%），本周AI接管表现整体偏弱；主要受演示站B站接管率仅66.20%拉低；（具体原因待补充）；<br>5.总生产任务接管率：<span style=\"font-weight:700;color:#16a34a\">84.81%</span>，同比下降<span style=\"font-weight:700;color:#16a34a\">1.65%</span>。整体未达到目标（86%），主要受自动化生产任务占比波动影响；（具体原因待补充）；<br>6.总任务成功率：<span style=\"font-weight:700;color:#16a34a\">97.43%</span>，同比提升<span style=\"font-weight:700;color:#16a34a\">0.26%</span>。整体达到目标（95%），本周任务执行稳定性较前一周期改善；<br>7.总异常任务远程恢复率：<span style=\"font-weight:700;color:#16a34a\">67.24%</span>，同比提升<span style=\"font-weight:700;color:#16a34a\">6.78%</span>。整体达到目标（65%），主要受部分站点异常数量较少、个别异常未能远程恢复影响；（具体原因待补充）；<br>8.总生产时长覆盖率：<span style=\"font-weight:700;color:#f59e0b\">89.29%</span>，同比下降<span style=\"font-weight:700;color:#f59e0b\">10.71%</span>，整体未达到目标（90%）。主要受演示站B站覆盖率70.39%拖累；（具体原因待补充）；<br>9.自动化生产方量覆盖率：<span style=\"font-weight:700;color:#16a34a\">75.73%</span>，同比下降<span style=\"font-weight:700;color:#16a34a\">10.74%</span>，整体未达到目标（80%）。本周自动化生产方量为3206.0方，同比增加397.6方；（具体原因待补充）；<br>10.故障及分布：故障频次<span style=\"font-weight:700\">0.09次/h</span>，同比改善<span style=\"font-weight:700\">0.01次/h</span>，故障频次较前一周期下降。一级故障占比为0.00%；（故障明细与分布待补充）。"
   },
   {
     "id": 1785149005319,
@@ -9051,7 +9051,7 @@
     },
     "siteDetails": [
       {
-        "station": "104",
+        "station": "演示站A",
         "opTime": 31.733333333333334,
         "autoFeed": 348,
         "autoProdFeed": 72,
@@ -9075,7 +9075,7 @@
         "_f3": 0
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "opTime": 51.68333333333333,
         "autoFeed": 177,
         "autoProdFeed": 170,
@@ -9099,7 +9099,7 @@
         "_f3": 0
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "opTime": 55.983333333333334,
         "autoFeed": 476,
         "autoProdFeed": 412,
@@ -9123,7 +9123,7 @@
         "_f3": 0
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "opTime": 37,
         "autoFeed": 347,
         "autoProdFeed": 39,
@@ -9149,7 +9149,7 @@
     ],
     "globalTargets": {},
     "siteTargets": {
-      "104": {
+      "演示站A": {
         "opHours": 55,
         "autoFeed": 650,
         "aiRate": 0.92,
@@ -9160,7 +9160,7 @@
         "autoVolCov": 0.8,
         "effRatio": 0.9
       },
-      "嘉兴": {
+      "演示站B": {
         "opHours": 65,
         "autoFeed": 550,
         "aiRate": 0.8,
@@ -9171,7 +9171,7 @@
         "autoVolCov": 0.8,
         "effRatio": 0.8
       },
-      "兴发": {
+      "演示站F": {
         "opHours": 65,
         "autoFeed": 700,
         "aiRate": 0.92,
@@ -9182,7 +9182,7 @@
         "autoVolCov": 0.85,
         "effRatio": 0.45
       },
-      "波然": {
+      "演示站I": {
         "opHours": 40,
         "autoFeed": 400,
         "aiRate": 0.81,
@@ -9196,7 +9196,7 @@
     },
     "records": [
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-20",
         "totalOpTime": "391",
         "autoFeedTotal": "94",
@@ -9241,7 +9241,7 @@
         "id": 1784600635857
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-20",
         "totalOpTime": "676",
         "autoFeedTotal": "46",
@@ -9286,7 +9286,7 @@
         "id": 1784600658904
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-20",
         "totalOpTime": "660",
         "autoFeedTotal": "156",
@@ -9331,7 +9331,7 @@
         "id": 1784600697241
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-20",
         "totalOpTime": "420",
         "autoFeedTotal": "89",
@@ -9355,7 +9355,7 @@
         "id": 1784600959224
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-21",
         "totalOpTime": "392",
         "autoFeedTotal": "33",
@@ -9379,7 +9379,7 @@
         "id": 1784687169691
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-21",
         "totalOpTime": "540",
         "autoFeedTotal": "12",
@@ -9401,7 +9401,7 @@
         "issues": [
           {
             "category": "系统故障",
-            "reason": "剑鸿排查后退急刹的问题（毫米波变形，后退刹车，后续更换）",
+            "reason": "技术人员排查后退急刹的问题（毫米波变形，后退刹车，后续更换）",
             "faultType": "传感器故障",
             "takeoverDuration": 40,
             "manualFeedCount": 0,
@@ -9411,7 +9411,7 @@
           },
           {
             "category": "系统故障",
-            "reason": "5号仓铲完料车机故障车子不动（下位机故障，长安重工排查中）",
+            "reason": "5号仓铲完料车机故障车子不动（下位机故障，示例设备厂商排查中）",
             "faultType": "本体故障",
             "takeoverDuration": 2,
             "manualFeedCount": 0,
@@ -9421,7 +9421,7 @@
           },
           {
             "category": "操作失误",
-            "reason": "许占功排查巡检轨迹的问题（超出运营范围，激光定位失败，已反馈）",
+            "reason": "技术人员排查巡检轨迹的问题（超出运营范围，激光定位失败，已反馈）",
             "faultType": "",
             "takeoverDuration": 20,
             "manualFeedCount": 0,
@@ -9444,7 +9444,7 @@
         "id": 1784687193875
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-21",
         "totalOpTime": "682",
         "autoFeedTotal": "86",
@@ -9519,7 +9519,7 @@
         "id": 1784687222299
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-21",
         "totalOpTime": "390",
         "autoFeedTotal": "67",
@@ -9554,7 +9554,7 @@
         "id": 1784687245379
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-22",
         "totalOpTime": "394",
         "autoFeedTotal": "40",
@@ -9576,7 +9576,7 @@
         "issues": [
           {
             "category": "系统故障",
-            "reason": "四号斗任务在料斗上方报车机故障 任务异常切本地开回待机点后自行恢复（偶现，已联系徐工）",
+            "reason": "四号斗任务在料斗上方报车机故障 任务异常切本地开回待机点后自行恢复（偶现，已联系示例制造商）",
             "faultType": "本体故障",
             "takeoverDuration": 1,
             "manualFeedCount": 0,
@@ -9586,7 +9586,7 @@
           },
           {
             "category": "系统故障",
-            "reason": "待机点执行二号仓任务时车机闪现电池故障又自行恢复（偶现，已联系徐工）",
+            "reason": "待机点执行二号仓任务时车机闪现电池故障又自行恢复（偶现，已联系示例制造商）",
             "faultType": "本体故障",
             "takeoverDuration": 0,
             "manualFeedCount": 0,
@@ -9596,7 +9596,7 @@
           },
           {
             "category": "系统故障",
-            "reason": "二号仓任务在仓内车机显示电池故障卡主 任务异常持续三分钟左右自行恢复切本地开回待机点（偶现，已联系徐工）",
+            "reason": "二号仓任务在仓内车机显示电池故障卡主 任务异常持续三分钟左右自行恢复切本地开回待机点（偶现，已联系示例制造商）",
             "faultType": "本体故障",
             "takeoverDuration": 1,
             "manualFeedCount": 0,
@@ -9609,7 +9609,7 @@
         "id": 1784774067890
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-22",
         "totalOpTime": "300",
         "autoFeedTotal": "36",
@@ -9654,7 +9654,7 @@
         "id": 1784774090738
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-22",
         "totalOpTime": "682",
         "autoFeedTotal": "82",
@@ -9699,7 +9699,7 @@
         "id": 1784776529305
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-22",
         "totalOpTime": "450",
         "autoFeedTotal": "46",
@@ -9744,7 +9744,7 @@
         "id": 1784776552087
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-23",
         "totalOpTime": "258",
         "autoFeedTotal": "60",
@@ -9809,7 +9809,7 @@
         "id": 1784857525481
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-23",
         "totalOpTime": "685",
         "autoFeedTotal": "23",
@@ -9864,7 +9864,7 @@
         "id": 1784857548247
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-23",
         "totalOpTime": "677",
         "autoFeedTotal": "74",
@@ -9919,7 +9919,7 @@
         "id": 1784857571030
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-23",
         "totalOpTime": "480",
         "autoFeedTotal": "60",
@@ -9954,7 +9954,7 @@
         "id": 1784857593813
       },
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-24",
         "totalOpTime": "469",
         "autoFeedTotal": "121",
@@ -9986,7 +9986,7 @@
           },
           {
             "category": "操作失误",
-            "reason": "待机点发五号仓任务显示初始姿态不对任务异常重新巡检后恢复（师傅停的不准导致）",
+            "reason": "待机点发五号仓任务显示初始姿态不对任务异常重新巡检后恢复（现场停车位置不准导致）",
             "faultType": "",
             "takeoverDuration": 0,
             "manualFeedCount": 0,
@@ -10006,7 +10006,7 @@
           },
           {
             "category": "系统故障",
-            "reason": "待机点执行五号仓任务时日志显示车机故障 但车机未显示故障点开始作业执行下一个任务（徐工本体故障）",
+            "reason": "待机点执行五号仓任务时日志显示车机故障 但车机未显示故障点开始作业执行下一个任务（示例制造商本体故障）",
             "faultType": "本体故障",
             "takeoverDuration": 0,
             "manualFeedCount": 0,
@@ -10039,7 +10039,7 @@
         "id": 1785122998604
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-24",
         "totalOpTime": "900",
         "autoFeedTotal": "60",
@@ -10084,7 +10084,7 @@
         "id": 1785123018084
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-24",
         "totalOpTime": "658",
         "autoFeedTotal": "78",
@@ -10129,7 +10129,7 @@
         "id": 1785123137344
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-24",
         "totalOpTime": "480",
         "autoFeedTotal": "85",
@@ -10176,21 +10176,21 @@
     ],
     "aiAnalysis": null,
     "siteCards": {
-      "104": {
+      "演示站A": {
         "analysis": "共运营5天，<span style=\"color:#dc2626\">有效运营31.7小时</span>，<span style=\"color:#dc2626\">累计上料367次</span>（自动化348次；另外手动上料19次，自动化异常8次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（92.96%）</span>、<span style=\"color:#16a34a\">任务成功率（97.75%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>、<span style=\"color:#16a34a\">自动化生产方量覆盖率（79.12%）</span>、<span style=\"color:#16a34a\">人效比（93.38%）</span>\n未达标指标：<span style=\"color:#f59e0b\">生产任务接管率（79.12%）</span>、<span style=\"color:#dc2626\">异常任务远程恢复率（50.00%）</span>\n手动接管及异常原因：1.避让进料车和其他障碍物；2.偶现下位机、电池本体故障；3.场地物料少；4.偶现激光雷达故障；5.停车点偏移。\n本周重点：继续车上生产运营，支撑新版测试，实施电控箱改造。\n",
-        "image": "/mock/report-images/1785149005319_104.png"
+        "image": "/mock/report-images/1785149005319_演示站A.png"
       },
-      "嘉兴": {
+      "演示站B": {
         "analysis": "共运营5天，<span style=\"color:#dc2626\">有效运营51.7小时</span>，<span style=\"color:#dc2626\">累计上料316次</span>（自动化177次；另外手动上料139次，自动化异常7次）；\n达标指标：<span style=\"color:#16a34a\">任务成功率（96.20%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>\n未达标指标：<span style=\"color:#dc2626\">AI时长接管率（55.59%）</span>、<span style=\"color:#dc2626\">生产任务接管率（55.02%）</span>、<span style=\"color:#dc2626\">异常任务远程恢复率（28.57%）</span>、<span style=\"color:#dc2626\">自动化生产方量覆盖率（55.02%）</span>、<span style=\"color:#dc2626\">人效比（70.08%）</span>\n手动接管及异常原因：1.毫米波支架变形；2.避让进料车；3.IMU故障、更换线束；4.漏雨，水雾导致的误避障；5.站内车辆铲料、料面变化；6.驾驶超出场地范围；7.偶发下位机故障。\n本周重点：继续远程监管运营，上周末毫米波支架已更换打印件，本周更换为金属件。",
-        "image": "/report-images/1785132791091_嘉兴.png"
+        "image": "/report-images/1785132791091_演示站B.png"
       },
-      "兴发": {
+      "演示站F": {
         "analysis": "共运营5天，<span style=\"color:#dc2626\">有效运营56.0小时</span>，<span style=\"color:#dc2626\">累计上料521次</span>（自动化476次；另外手动上料45次，自动化异常4次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（94.11%）</span>、<span style=\"color:#16a34a\">任务成功率（99.17%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>、<span style=\"color:#16a34a\">自动化生产方量覆盖率（90.15%）</span>\n未达标指标：<span style=\"color:#dc2626\">生产任务接管率（90.15%）</span>、<span style=\"color:#dc2626\">异常任务远程恢复率（25.00%）</span>、<span style=\"color:#dc2626\">人效比（42.22%）</span>\n手动接管及异常原因：1.避让进料车；2.整理溢料；3.后退离障碍物太近避障；4.偶发下位机故障；5.误操作导致重复发布任务。\n本周重点：继续车上生产运营，本周确定客户对接人，开始实施自动化生产培训。",
-        "image": "/report-images/1785132791091_兴发.png"
+        "image": "/report-images/1785132791091_演示站F.png"
       },
-      "波然": {
-        "analysis": "共运营5天，<span style=\"color:#dc2626\">有效运营37.0小时</span>，<span style=\"color:#dc2626\">累计上料361次</span>（自动化347次；另外手动上料14次，自动化异常13次）；\n达标指标：<span style=\"color:#16a34a\">任务成功率（96.39%）</span>、<span style=\"color:#16a34a\">异常任务远程恢复率（76.92%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>、<span style=\"color:#16a34a\">人效比（65.87%）</span>\n未达标指标：<span style=\"color:#dc2626\">AI时长接管率（75.00%）</span>、<span style=\"color:#dc2626\">生产任务接管率（73.58%）</span>、<span style=\"color:#dc2626\">自动化生产方量覆盖率（73.58%）</span>\n手动接管及异常原因：1.避让进料车；2.偶发激光故障；3.手动转运物料；4.偶发下位机故障。\n本周重点：本周完成师傅下车培训和考试，推进师傅下车，同步推进验收。",
-        "image": "/report-images/1785132791091_波然.png"
+      "演示站I": {
+        "analysis": "共运营5天，<span style=\"color:#dc2626\">有效运营37.0小时</span>，<span style=\"color:#dc2626\">累计上料361次</span>（自动化347次；另外手动上料14次，自动化异常13次）；\n达标指标：<span style=\"color:#16a34a\">任务成功率（96.39%）</span>、<span style=\"color:#16a34a\">异常任务远程恢复率（76.92%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>、<span style=\"color:#16a34a\">人效比（65.87%）</span>\n未达标指标：<span style=\"color:#dc2626\">AI时长接管率（75.00%）</span>、<span style=\"color:#dc2626\">生产任务接管率（73.58%）</span>、<span style=\"color:#dc2626\">自动化生产方量覆盖率（73.58%）</span>\n手动接管及异常原因：1.避让进料车；2.偶发激光故障；3.手动转运物料；4.偶发下位机故障。\n本周重点：本周完成现场人员下车培训和考试，推进现场人员下车，同步推进验收。",
+        "image": "/report-images/1785132791091_演示站I.png"
       }
     },
     "otherMatters": "<p>无人16+23版本测试，2.0电控箱测试，远控V2.3.5.1开发</p><p>\n</p>",
@@ -10716,7 +10716,7 @@
         "c": "rpt-v rpt-hit",
         "s": ""
       },
-      "104": {
+      "演示站A": {
         "t": "90.00%",
         "c": "rpt-na",
         "s": ""
@@ -11727,7 +11727,7 @@
         "s": ""
       }
     },
-    "analysis": "1.运营概况：本周共运营4个站点，分别为104、嘉兴、兴发、波然。<span style=\"color: var(--t1); font-family: inherit;\">受高温、多雨天气影响，各站点生产均有收缩，其中104站和嘉兴站生产规模下降明显。同时，嘉兴站因毫米波雷达支架变形、IMU线束更换和兴发站避让进料车、整理溢料导致的人工接管次数上升，使得上周AI时长接管率、生产任务接管率、自动化生产方量覆盖率未达标。但任务成功率、人效比、生产时长覆盖率均略有上升，故障频次也稳定保持在低位。</span>\n2.总运营时间：<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">176.4h</span>，同比减少<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">39.8h</span>，<span style=\"color: var(--t1); font-family: inherit;\">天气原因导致104站和嘉兴站运营时长减少明显；嘉兴由于毫米波故障阻塞导致运营时长进一步收缩；</span><div>3.总上料数：累计<span style=\"font-weight: 700;\">1,565次</span>（自动化1,348次，含自动生产693次、测试655次；另外手动上料217次），<span style=\"color: var(--t1); font-family: inherit;\">自动化上料同比下降848次，同样由于运营时长减少导致自动上料数下降；</span><br>4.总AI时长接管率：<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">78.61%</span>，同比下降<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">2.89%</span>。整体未达到目标（85.00%），<span style=\"color: var(--t1); font-family: inherit;\">本周AI接管略有下降，主要因为嘉兴毫米波支架故障、避让进料车和更换IMU线束导致的手动接管时长显著增加，除嘉兴外各站AI接管率变化不大；</span></div><div>5.总生产任务接管率：<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">76.15%</span>，同比下降<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">8.66%</span>。整体未达到目标（86.00%），<span style=\"color: var(--t1); font-family: inherit;\">嘉兴、兴发因毫米波故障，进料，避让进料车和更换IMU线束导致手动上料较多，使得总接管率下降；</span></div><div>6.总任务成功率：<span style=\"font-weight: 700; color: rgb(22, 163, 74);\">97.68%</span>，同比提升<span style=\"font-weight: 700; color: rgb(22, 163, 74);\">0.25%</span>。整体超过目标（96.00%），<span style=\"color: var(--t1); font-family: inherit;\">本周任务执行稳定性较前一周期改善，各站点均维持高位；</span></div><div>7.总异常任务远程恢复率：<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">53.13%</span>，同比下降<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">14.12%</span>。整体未达到目标（65.00%），<span style=\"color: var(--t1); font-family: inherit;\">本周各站点异常数量均较少、但传感器故障和本体故障占比较高且无法远程恢复，使得远程恢复率较低；</span></div><div>8.总生产时长覆盖率：<span style=\"font-weight: 700; color: rgb(22, 163, 74);\">100.00%</span>，同比提升<span style=\"font-weight: 700; color: rgb(22, 163, 74);\">10.71%</span>，整体超过目标（90.00%）。各生产站点整体覆盖情况较好；<br>9.自动化生产方量覆盖率：<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">76.15%</span>，同比提升<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">0.43%</span>，整体未达到目标（80.00%）。本周自动化生产方量为1,940.4方，同比减少1,265.6方；<span style=\"color: var(--t1); font-family: inherit;\">主要受生产时长覆盖率下降影响；</span></div><div>10.故障及分布：故障频次<span style=\"font-weight: 700;\">0.10次/h</span>，同比增加<span style=\"font-weight: 700;\">0.01次/h</span>，<span style=\"color: var(--t1); font-family: inherit;\">稳定在历史低位。一级故障占比为0.00%。二级故障共计18次，占比100.00%；本体故障8次（偶现电池故障2次。下位机故障2次，其他本体故障4次）、传感器故障7次（激光故障2次，毫米波支架变形导致故障4次，IMU故障1次）、算法故障3次（后退离障碍物过近避障、主程序故障等）。<br></span></div>"
+    "analysis": "1.运营概况：本周共运营4个站点，分别为演示站A、演示站B、演示站F、演示站I。<span style=\"color: var(--t1); font-family: inherit;\">受高温、多雨天气影响，各站点生产均有收缩，其中演示站A站和演示站B站生产规模下降明显。同时，演示站B站因毫米波雷达支架变形、IMU线束更换和演示站F站避让进料车、整理溢料导致的人工接管次数上升，使得上周AI时长接管率、生产任务接管率、自动化生产方量覆盖率未达标。但任务成功率、人效比、生产时长覆盖率均略有上升，故障频次也稳定保持在低位。</span>\n2.总运营时间：<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">176.4h</span>，同比减少<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">39.8h</span>，<span style=\"color: var(--t1); font-family: inherit;\">天气原因导致演示站A站和演示站B站运营时长减少明显；演示站B由于毫米波故障阻塞导致运营时长进一步收缩；</span><div>3.总上料数：累计<span style=\"font-weight: 700;\">1,565次</span>（自动化1,348次，含自动生产693次、测试655次；另外手动上料217次），<span style=\"color: var(--t1); font-family: inherit;\">自动化上料同比下降848次，同样由于运营时长减少导致自动上料数下降；</span><br>4.总AI时长接管率：<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">78.61%</span>，同比下降<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">2.89%</span>。整体未达到目标（85.00%），<span style=\"color: var(--t1); font-family: inherit;\">本周AI接管略有下降，主要因为演示站B毫米波支架故障、避让进料车和更换IMU线束导致的手动接管时长显著增加，除演示站B外各站AI接管率变化不大；</span></div><div>5.总生产任务接管率：<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">76.15%</span>，同比下降<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">8.66%</span>。整体未达到目标（86.00%），<span style=\"color: var(--t1); font-family: inherit;\">演示站B、演示站F因毫米波故障，进料，避让进料车和更换IMU线束导致手动上料较多，使得总接管率下降；</span></div><div>6.总任务成功率：<span style=\"font-weight: 700; color: rgb(22, 163, 74);\">97.68%</span>，同比提升<span style=\"font-weight: 700; color: rgb(22, 163, 74);\">0.25%</span>。整体超过目标（96.00%），<span style=\"color: var(--t1); font-family: inherit;\">本周任务执行稳定性较前一周期改善，各站点均维持高位；</span></div><div>7.总异常任务远程恢复率：<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">53.13%</span>，同比下降<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">14.12%</span>。整体未达到目标（65.00%），<span style=\"color: var(--t1); font-family: inherit;\">本周各站点异常数量均较少、但传感器故障和本体故障占比较高且无法远程恢复，使得远程恢复率较低；</span></div><div>8.总生产时长覆盖率：<span style=\"font-weight: 700; color: rgb(22, 163, 74);\">100.00%</span>，同比提升<span style=\"font-weight: 700; color: rgb(22, 163, 74);\">10.71%</span>，整体超过目标（90.00%）。各生产站点整体覆盖情况较好；<br>9.自动化生产方量覆盖率：<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">76.15%</span>，同比提升<span style=\"font-weight: 700; color: rgb(220, 38, 38);\">0.43%</span>，整体未达到目标（80.00%）。本周自动化生产方量为1,940.4方，同比减少1,265.6方；<span style=\"color: var(--t1); font-family: inherit;\">主要受生产时长覆盖率下降影响；</span></div><div>10.故障及分布：故障频次<span style=\"font-weight: 700;\">0.10次/h</span>，同比增加<span style=\"font-weight: 700;\">0.01次/h</span>，<span style=\"color: var(--t1); font-family: inherit;\">稳定在历史低位。一级故障占比为0.00%。二级故障共计18次，占比100.00%；本体故障8次（偶现电池故障2次。下位机故障2次，其他本体故障4次）、传感器故障7次（激光故障2次，毫米波支架变形导致故障4次，IMU故障1次）、算法故障3次（后退离障碍物过近避障、主程序故障等）。<br></span></div>"
   },
   {
     "id": 1785829203122,
@@ -11757,7 +11757,7 @@
     },
     "siteDetails": [
       {
-        "station": "104",
+        "station": "演示站A",
         "opTime": 9.8,
         "autoFeed": 114,
         "autoProdFeed": 38,
@@ -11781,7 +11781,7 @@
         "_f3": 0
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "opTime": 19.516666666666666,
         "autoFeed": 289,
         "autoProdFeed": 289,
@@ -11805,7 +11805,7 @@
         "_f3": 0
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "opTime": 22.2,
         "autoFeed": 157,
         "autoProdFeed": 157,
@@ -11829,7 +11829,7 @@
         "_f3": 0
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "opTime": 13,
         "autoFeed": 150,
         "autoProdFeed": 0,
@@ -11855,7 +11855,7 @@
     ],
     "globalTargets": {},
     "siteTargets": {
-      "104": {
+      "演示站A": {
         "opHours": "197",
         "autoFeed": "1905",
         "aiRate": 0.905,
@@ -11866,7 +11866,7 @@
         "autoVolCov": 0.81,
         "effRatio": 0.665
       },
-      "嘉兴": {
+      "演示站B": {
         "opHours": "42.5",
         "autoFeed": "445",
         "aiRate": 0.795,
@@ -11877,7 +11877,7 @@
         "autoVolCov": 0.84,
         "effRatio": 0.77
       },
-      "兴发": {
+      "演示站F": {
         "opHours": "64.5",
         "autoFeed": "525",
         "aiRate": 0.875,
@@ -11888,7 +11888,7 @@
         "autoVolCov": 0.9,
         "effRatio": 0.425
       },
-      "波然": {
+      "演示站I": {
         "opHours": "35",
         "autoFeed": "375",
         "aiRate": 0.845,
@@ -11902,7 +11902,7 @@
     },
     "records": [
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-27",
         "totalOpTime": "590",
         "autoFeedTotal": "114",
@@ -11997,7 +11997,7 @@
         "id": 1785206320016
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-27",
         "totalOpTime": "631",
         "autoFeedTotal": "164",
@@ -12042,7 +12042,7 @@
         "id": 1785206347239
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-27",
         "totalOpTime": "684",
         "autoFeedTotal": "81",
@@ -12097,7 +12097,7 @@
         "id": 1785206363400
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-27",
         "totalOpTime": "330",
         "autoFeedTotal": "70",
@@ -12132,7 +12132,7 @@
         "id": 1785206377239
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-28",
         "totalOpTime": "540",
         "autoFeedTotal": "125",
@@ -12167,7 +12167,7 @@
         "id": 1785291851054
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-28",
         "totalOpTime": "648",
         "autoFeedTotal": "76",
@@ -12212,7 +12212,7 @@
         "id": 1785291872254
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-28",
         "totalOpTime": "450",
         "autoFeedTotal": "80",
@@ -12259,19 +12259,19 @@
     ],
     "aiAnalysis": null,
     "siteCards": {
-      "104": {
+      "演示站A": {
         "analysis": "共运营1天，<span style=\"color:#dc2626\">有效运营9.8小时</span>，<span style=\"color:#dc2626\">累计上料114次</span>（自动化114次；另外手动上料0次，自动化异常2次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（95.08%）</span>、<span style=\"color:#16a34a\">生产任务接管率（100.00%）</span>、<span style=\"color:#16a34a\">任务成功率（98.28%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>、<span style=\"color:#16a34a\">自动化生产方量覆盖率（100.00%）</span>\n未达标指标：<span style=\"color:#dc2626\">异常任务远程恢复率（0.00%）</span>、<span style=\"color:#dc2626\">人效比（87.50%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
         "image": ""
       },
-      "嘉兴": {
+      "演示站B": {
         "analysis": "共运营2天，<span style=\"color:#dc2626\">有效运营19.5小时</span>，<span style=\"color:#dc2626\">累计上料295次</span>（自动化289次；另外手动上料6次，自动化异常4次）；\n达标指标：<span style=\"color:#16a34a\">生产任务接管率（97.97%）</span>、<span style=\"color:#16a34a\">任务成功率（98.63%）</span>、<span style=\"color:#16a34a\">异常任务远程恢复率（100.00%）</span>\n未达标指标：<span style=\"color:#dc2626\">AI时长接管率（77.28%）</span>、<span style=\"color:#dc2626\">生产时长覆盖率（63.41%）</span>、<span style=\"color:#dc2626\">自动化生产方量覆盖率（62.12%）</span>、<span style=\"color:#dc2626\">人效比（74.46%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
         "image": ""
       },
-      "兴发": {
+      "演示站F": {
         "analysis": "共运营2天，<span style=\"color:#dc2626\">有效运营22.2小时</span>，<span style=\"color:#dc2626\">累计上料164次</span>（自动化157次；另外手动上料7次，自动化异常1次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（93.77%）</span>、<span style=\"color:#16a34a\">生产任务接管率（95.73%）</span>、<span style=\"color:#16a34a\">任务成功率（99.37%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>、<span style=\"color:#16a34a\">自动化生产方量覆盖率（95.73%）</span>\n未达标指标：<span style=\"color:#dc2626\">异常任务远程恢复率（0.00%）</span>、<span style=\"color:#dc2626\">人效比（37.94%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
         "image": ""
       },
-      "波然": {
+      "演示站I": {
         "analysis": "共运营2天，<span style=\"color:#dc2626\">有效运营13.0小时</span>，<span style=\"color:#dc2626\">累计上料161次</span>（自动化150次；另外手动上料11次，自动化异常6次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（89.74%）</span>、<span style=\"color:#16a34a\">任务成功率（96.15%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>\n未达标指标：<span style=\"color:#dc2626\">生产任务接管率（0.00%）</span>、<span style=\"color:#dc2626\">异常任务远程恢复率（66.67%）</span>、<span style=\"color:#dc2626\">自动化生产方量覆盖率（0.00%）</span>、<span style=\"color:#f59e0b\">人效比（63.55%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
         "image": ""
       }
@@ -12799,7 +12799,7 @@
         "c": "rpt-v rpt-miss",
         "s": ""
       },
-      "104": {
+      "演示站A": {
         "t": "66.50%",
         "c": "rpt-na",
         "s": ""
@@ -13839,7 +13839,7 @@
     },
     "siteDetails": [
       {
-        "station": "104",
+        "station": "演示站A",
         "opTime": 9.833333333333334,
         "autoFeed": 114,
         "autoProdFeed": 38,
@@ -13863,7 +13863,7 @@
         "_f3": 0
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "opTime": 19.516666666666666,
         "autoFeed": 289,
         "autoProdFeed": 289,
@@ -13887,7 +13887,7 @@
         "_f3": 0
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "opTime": 22.2,
         "autoFeed": 157,
         "autoProdFeed": 157,
@@ -13911,7 +13911,7 @@
         "_f3": 0
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "opTime": 13,
         "autoFeed": 150,
         "autoProdFeed": 0,
@@ -13937,7 +13937,7 @@
     ],
     "globalTargets": {},
     "siteTargets": {
-      "104": {
+      "演示站A": {
         "opHours": 197,
         "autoFeed": 1905,
         "aiRate": 0.905,
@@ -13948,7 +13948,7 @@
         "autoVolCov": 0.81,
         "effRatio": 0.665
       },
-      "嘉兴": {
+      "演示站B": {
         "opHours": 42.5,
         "autoFeed": 445,
         "aiRate": 0.795,
@@ -13959,7 +13959,7 @@
         "autoVolCov": 0.84,
         "effRatio": 0.77
       },
-      "兴发": {
+      "演示站F": {
         "opHours": 64.5,
         "autoFeed": 525,
         "aiRate": 0.875,
@@ -13970,7 +13970,7 @@
         "autoVolCov": 0.9,
         "effRatio": 0.425
       },
-      "波然": {
+      "演示站I": {
         "opHours": 35,
         "autoFeed": 375,
         "aiRate": 0.845,
@@ -13984,7 +13984,7 @@
     },
     "records": [
       {
-        "station": "104",
+        "station": "演示站A",
         "date": "2026-07-27",
         "totalOpTime": "590",
         "autoFeedTotal": "114",
@@ -14079,7 +14079,7 @@
         "id": 1785206320016
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-27",
         "totalOpTime": "631",
         "autoFeedTotal": "164",
@@ -14124,7 +14124,7 @@
         "id": 1785206347239
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-27",
         "totalOpTime": "684",
         "autoFeedTotal": "81",
@@ -14179,7 +14179,7 @@
         "id": 1785206363400
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-27",
         "totalOpTime": "330",
         "autoFeedTotal": "70",
@@ -14214,7 +14214,7 @@
         "id": 1785206377239
       },
       {
-        "station": "嘉兴",
+        "station": "演示站B",
         "date": "2026-07-28",
         "totalOpTime": "540",
         "autoFeedTotal": "125",
@@ -14249,7 +14249,7 @@
         "id": 1785291851054
       },
       {
-        "station": "兴发",
+        "station": "演示站F",
         "date": "2026-07-28",
         "totalOpTime": "648",
         "autoFeedTotal": "76",
@@ -14294,7 +14294,7 @@
         "id": 1785291872254
       },
       {
-        "station": "波然",
+        "station": "演示站I",
         "date": "2026-07-28",
         "totalOpTime": "450",
         "autoFeedTotal": "80",
@@ -14341,19 +14341,19 @@
     ],
     "aiAnalysis": null,
     "siteCards": {
-      "104": {
+      "演示站A": {
         "analysis": "共运营1天，<span style=\"color:#dc2626\">有效运营9.8小时</span>，<span style=\"color:#dc2626\">累计上料114次</span>（自动化114次；另外手动上料0次，自动化异常2次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（95.08%）</span>、<span style=\"color:#16a34a\">生产任务接管率（100.00%）</span>、<span style=\"color:#16a34a\">任务成功率（98.28%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>、<span style=\"color:#16a34a\">自动化生产方量覆盖率（100.00%）</span>\n未达标指标：<span style=\"color:#dc2626\">异常任务远程恢复率（0.00%）</span>、<span style=\"color:#dc2626\">人效比（87.50%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
         "image": ""
       },
-      "嘉兴": {
+      "演示站B": {
         "analysis": "共运营2天，<span style=\"color:#dc2626\">有效运营19.5小时</span>，<span style=\"color:#dc2626\">累计上料295次</span>（自动化289次；另外手动上料6次，自动化异常4次）；\n达标指标：<span style=\"color:#16a34a\">生产任务接管率（97.97%）</span>、<span style=\"color:#16a34a\">任务成功率（98.63%）</span>、<span style=\"color:#16a34a\">异常任务远程恢复率（100.00%）</span>\n未达标指标：<span style=\"color:#dc2626\">AI时长接管率（77.28%）</span>、<span style=\"color:#dc2626\">生产时长覆盖率（63.41%）</span>、<span style=\"color:#dc2626\">自动化生产方量覆盖率（62.12%）</span>、<span style=\"color:#dc2626\">人效比（74.46%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
         "image": ""
       },
-      "兴发": {
+      "演示站F": {
         "analysis": "共运营2天，<span style=\"color:#dc2626\">有效运营22.2小时</span>，<span style=\"color:#dc2626\">累计上料164次</span>（自动化157次；另外手动上料7次，自动化异常1次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（93.77%）</span>、<span style=\"color:#16a34a\">生产任务接管率（95.73%）</span>、<span style=\"color:#16a34a\">任务成功率（99.37%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>、<span style=\"color:#16a34a\">自动化生产方量覆盖率（95.73%）</span>\n未达标指标：<span style=\"color:#dc2626\">异常任务远程恢复率（0.00%）</span>、<span style=\"color:#dc2626\">人效比（37.94%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
         "image": ""
       },
-      "波然": {
+      "演示站I": {
         "analysis": "共运营2天，<span style=\"color:#dc2626\">有效运营13.0小时</span>，<span style=\"color:#dc2626\">累计上料161次</span>（自动化150次；另外手动上料11次，自动化异常6次）；\n达标指标：<span style=\"color:#16a34a\">AI时长接管率（89.74%）</span>、<span style=\"color:#16a34a\">任务成功率（96.15%）</span>、<span style=\"color:#16a34a\">生产时长覆盖率（100.00%）</span>\n未达标指标：<span style=\"color:#dc2626\">生产任务接管率（0.00%）</span>、<span style=\"color:#dc2626\">异常任务远程恢复率（66.67%）</span>、<span style=\"color:#dc2626\">自动化生产方量覆盖率（0.00%）</span>、<span style=\"color:#f59e0b\">人效比（63.55%）</span>\n手动接管及异常原因：暂未提供。\n本周重点：暂未提供。",
         "image": ""
       }
@@ -14881,7 +14881,7 @@
         "c": "rpt-v rpt-miss",
         "s": ""
       },
-      "104": {
+      "演示站A": {
         "t": "66.50%",
         "c": "rpt-na",
         "s": ""

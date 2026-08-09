@@ -24,11 +24,11 @@ const TIER_ROWS_DEFAULT = [
 // 每站每指标 [7月(基线), 8月, 9月]；其余月份列沿用全站默认表同列。
 // 7月列为爬坡起点（基线），8月从7月列起爬，9月起纯目标链（上月列→本月列）。
 const STATION_TGT = {
-  '104':     { '站点运营时长目标(h)':[150.5,150,160], '站点上料任务数目标':[2042,2050,2100], 'AI时长接管率(上料)':[90.48,91,92], '生产任务接管率(上料)':[79.90,81,82], '任务成功率(上料)':[96.78,96,96], '异常任务远程恢复率':[64.62,66,67], '生产时长覆盖率':[85.20,90,90], '自动化生产方量覆盖率':[68.07,70,72], '人效比':[94.96,95,96] },
-  '嘉兴':    { '站点运营时长目标(h)':[213.4,170,180], '站点上料任务数目标':[1774,1800,1850], 'AI时长接管率(上料)':[78.80,82,84], '生产任务接管率(上料)':[84.01,85,86], '任务成功率(上料)':[98.45,96,96], '异常任务远程恢复率':[73.08,75,76], '生产时长覆盖率':[99.89,93,95], '自动化生产方量覆盖率':[83.92,85,86], '人效比':[77.02,78,79] },
-  '兴发':    { '站点运营时长目标(h)':[257.8,260,265], '站点上料任务数目标':[2183,2100,2150], 'AI时长接管率(上料)':[87.42,88,89], '生产任务接管率(上料)':[90.77,91,92], '任务成功率(上料)':[97.23,96,96], '异常任务远程恢复率':[42.11,46,50], '生产时长覆盖率':[99.58,93,95], '自动化生产方量覆盖率':[90.40,90,90], '人效比':[42.33,44,46] },
-  '甘肃路桥': { '站点运营时长目标(h)':[10.7,130,140], '站点上料任务数目标':[6,540,600], 'AI时长接管率(上料)':[88.50,90,91], '生产任务接管率(上料)':[69.38,71,73], '任务成功率(上料)':[79.65,82,84], '异常任务远程恢复率':[87.68,88,88], '生产时长覆盖率':[50.73,90,90], '自动化生产方量覆盖率':[35.20,40,45], '人效比':[66.93,68,69] },
-  '波然':    { '站点运营时长目标(h)':[139.8,140,150], '站点上料任务数目标':[1526,1500,1550], 'AI时长接管率(上料)':[84.29,85,86], '生产任务接管率(上料)':[77.93,79,80], '任务成功率(上料)':[97.87,96,96], '异常任务远程恢复率':[40.00,45,50], '生产时长覆盖率':[100.00,93,95], '自动化生产方量覆盖率':[77.93,79,80], '人效比':[64.28,66,68] },
+  '演示站A':     { '站点运营时长目标(h)':[150.5,150,160], '站点上料任务数目标':[2042,2050,2100], 'AI时长接管率(上料)':[90.48,91,92], '生产任务接管率(上料)':[79.90,81,82], '任务成功率(上料)':[96.78,96,96], '异常任务远程恢复率':[64.62,66,67], '生产时长覆盖率':[85.20,90,90], '自动化生产方量覆盖率':[68.07,70,72], '人效比':[94.96,95,96] },
+  '演示站B':    { '站点运营时长目标(h)':[213.4,170,180], '站点上料任务数目标':[1774,1800,1850], 'AI时长接管率(上料)':[78.80,82,84], '生产任务接管率(上料)':[84.01,85,86], '任务成功率(上料)':[98.45,96,96], '异常任务远程恢复率':[73.08,75,76], '生产时长覆盖率':[99.89,93,95], '自动化生产方量覆盖率':[83.92,85,86], '人效比':[77.02,78,79] },
+  '演示站F':    { '站点运营时长目标(h)':[257.8,260,265], '站点上料任务数目标':[2183,2100,2150], 'AI时长接管率(上料)':[87.42,88,89], '生产任务接管率(上料)':[90.77,91,92], '任务成功率(上料)':[97.23,96,96], '异常任务远程恢复率':[42.11,46,50], '生产时长覆盖率':[99.58,93,95], '自动化生产方量覆盖率':[90.40,90,90], '人效比':[42.33,44,46] },
+  '演示站H': { '站点运营时长目标(h)':[10.7,130,140], '站点上料任务数目标':[6,540,600], 'AI时长接管率(上料)':[88.50,90,91], '生产任务接管率(上料)':[69.38,71,73], '任务成功率(上料)':[79.65,82,84], '异常任务远程恢复率':[87.68,88,88], '生产时长覆盖率':[50.73,90,90], '自动化生产方量覆盖率':[35.20,40,45], '人效比':[66.93,68,69] },
+  '演示站I':    { '站点运营时长目标(h)':[139.8,140,150], '站点上料任务数目标':[1526,1500,1550], 'AI时长接管率(上料)':[84.29,85,86], '生产任务接管率(上料)':[77.93,79,80], '任务成功率(上料)':[97.87,96,96], '异常任务远程恢复率':[40.00,45,50], '生产时长覆盖率':[100.00,93,95], '自动化生产方量覆盖率':[77.93,79,80], '人效比':[64.28,66,68] },
 };
 // 展开为 12 个月完整表（7/8/9 月列用上表，其余月份取全站默认）
 const STATION_TIER_DEFAULTS = {};
@@ -584,7 +584,7 @@ function updateReportStationList() {
   `).join('');
 }
 
-// 各站点分析自动填充：BI 作业总时长 + 上料/手动/异常 + 表格达标判定（7 效果指标 vs 上周目标，数值上色不加粗）
+// 各站点分析自动填充：模拟数据作业总时长 + 上料/手动/异常 + 表格达标判定（7 效果指标 vs 上周目标，数值上色不加粗）
 function buildStationAutoAnalysis(sd, prevTarget, opDays, workHours) {
   if (!sd) return '';
   const wh = (workHours != null && workHours !== '') ? workHours : (sd.opTime || 0);  // 有效运营=BI作业总时长，回退总运营时间
@@ -739,15 +739,15 @@ async function generateReport() {
       };
     });
 
-    // 各站点分析自动填充：BI 作业总时长 + 表格达标判定，生成即固化
+    // 各站点分析自动填充：模拟数据作业总时长 + 表格达标判定，生成即固化
     const prevStart = shiftDate(s, -7), prevEnd = shiftDate(s, -1);
     // 与表格"上周目标"对齐：直接复制上周周报 siteTargets（无上周周报才回滚）
     const prevWeekTargets = getPrevWeekTargets(prevStart, prevEnd, sites);
-    // 按站取 BI 作业总时长（有效运营时间）
+    // 按站取 模拟数据作业总时长（有效运营时间）
     const biWorkHours = {};
     await Promise.all(sites.map(async function(st) {
       try {
-        const r = await fetch('/api/bi-export', { method:'POST', headers:{'Content-Type':'application/json'},
+        const r = await fetch('/api/mock-export', { method:'POST', headers:{'Content-Type':'application/json'},
           body: JSON.stringify({ site_name: st, start_date: s, end_date: e }) });
         const d = await r.json();
         if (d.success && d.map && d.map['作业总时长'] != null) biWorkHours[st] = d.map['作业总时长'];
@@ -850,7 +850,7 @@ const RPT_ROWS = [
   ['上料数','自动生产上料数','autoProdFeed',null,'次'],
   ['上料数','手动上料数','manualFeed',null,'次'],
   ['上料数','总生产方量','totalVol',null,'m³'],
-  ['上料数','师傅接管生产方量','ourVol',null,'m³'],
+  ['上料数','人工接管生产方量','ourVol',null,'m³'],
   ['上料数','自动化生产方量','autoVol',null,'m³'],
 ];
 
@@ -1421,14 +1421,14 @@ const SC_EXPORT_CSS = `
 .dcard.primary .x-rate b{font-size:23px}
 .x-mods{display:flex;align-items:stretch;margin-top:4px}
 .x-mod-l{display:flex;flex-direction:column;min-width:0}
-.x-mod-bi{display:flex;min-width:0;margin-left:12px}
+.x-mod-panel{display:flex;min-width:0;margin-left:12px}
 .x-mod-box{display:flex;flex-direction:column;flex:1;border:1px solid #e2e8f0;border-radius:12px;background:#fbfcfe;padding:14px;box-sizing:border-box}
 .x-mod-l .x-mod-box+.x-mod-box{margin-top:12px}
 .x-mod-box h3{margin:0 0 10px;font-size:13px}
 .x-text{flex:1;border:1px dashed #cbd5e1;border-radius:8px;background:#fff;color:#526177;font-size:12px;line-height:1.7;padding:10px;min-height:96px;white-space:pre-wrap;word-break:break-word;box-sizing:border-box}
-.x-bi{flex:1;border:1px dashed #aebbd0;border-radius:9px;background:#fff;padding:8px;min-height:250px;text-align:center;box-sizing:border-box}
-.x-bi img{max-width:100%;border-radius:6px}
-.x-bi .none{color:#718096;font-size:12px;padding:60px 0}
+.x-panel{flex:1;border:1px dashed #aebbd0;border-radius:9px;background:#fff;padding:8px;min-height:250px;text-align:center;box-sizing:border-box}
+.x-panel img{max-width:100%;border-radius:6px}
+.x-panel .none{color:#718096;font-size:12px;padding:60px 0}
 `;
 function _scExportMetricHtml(key, mk, subText, grow) {
   const def = mk.def;
@@ -1474,8 +1474,8 @@ function _scExportHtml(m) {
           <div class="x-mod-box"><h3>手动接管及异常原因</h3><div class="x-text">${text(m.manualText)}</div></div>
           <div class="x-mod-box"><h3>本周重点</h3><div class="x-text">${text(m.focusText)}</div></div>
         </div>
-        <div class="x-mod-bi" style="flex:1.32"><div class="x-mod-box"><h3>数据看板</h3>
-          <div class="x-bi">${m.image ? `<img src="${m.image}" alt="">` : '<div class="none">暂无截图</div>'}</div>
+        <div class="x-mod-panel" style="flex:1.32"><div class="x-mod-box"><h3>数据看板</h3>
+          <div class="x-panel">${m.image ? `<img src="${m.image}" alt="">` : '<div class="none">暂无截图</div>'}</div>
         </div></div>
       </div>
     </div>
@@ -1488,7 +1488,7 @@ async function _captureStationCard(report, station) {
   clone.style.cssText = 'position:fixed;left:-9999px;top:0;';
   clone.innerHTML = '<style>' + SC_EXPORT_CSS + '</style>' + _scExportHtml(m);
   document.body.appendChild(clone);
-  const ci = clone.querySelector('.x-bi img');
+  const ci = clone.querySelector('.x-panel img');
   if (ci) { try { await new Promise(r => { ci.onload = r; ci.onerror = r; }); } catch(e) {} await new Promise(r => setTimeout(r, 300)); }
   try {
     return await html2canvas(clone.querySelector('.x-page'), { backgroundColor: '#f2f5f9', scale: 2, logging: false, useCORS: true });
@@ -1707,7 +1707,7 @@ function readStationFromTable(station) {
     }
   };
 }
-// 一键生成：按 BI + 表格数据重新生成该站分析（覆盖当前内容）
+// 一键生成：按 模拟数据 + 表格数据重新生成该站分析（覆盖当前内容）
 async function regenStationAnalysis(btn, station) {
   const report = window.currentReport;
   if (!report) return;
@@ -1728,10 +1728,10 @@ async function regenStationAnalysis(btn, station) {
       if (tv.actual.manualFeed != null) sd.manualFeed = tv.actual.manualFeed;
       prevTarget = tv.target;  // 用表格编辑后的上周目标
     }
-    // 取 BI 作业总时长
+    // 取 模拟数据作业总时长
     let workHours = null;
     try {
-      const r = await fetch('/api/bi-export', { method:'POST', headers:{'Content-Type':'application/json'},
+      const r = await fetch('/api/mock-export', { method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ site_name: station, start_date: report.dateRange.start, end_date: report.dateRange.end }) });
       const d = await r.json();
       if (d.success && d.map && d.map['作业总时长'] != null) workHours = d.map['作业总时长'];
@@ -1806,9 +1806,9 @@ function toggleReportAnalysis() {
 // ── 查看/列表 ──
 // ── 周报预览（自动截图各板块嵌入，可编辑 + 复制到剪切板）──
 const STATION_DISPLAY = {
-  '104': '#104站', '宜涪': '#宜涪站', '嘉兴': '#嘉兴站', '知行良知': '#知行良知',
-  '舟山电厂': '#舟山电厂', '兴发': '#兴发盐库', '长赣': '#江西长赣',
-  '甘肃路桥': '#甘肃路桥', '波然': '#中铁20局-波然'
+  '演示站A': '#演示站A站', '演示站C': '#演示站C站', '演示站B': '#演示站B站', '演示站G': '#演示站G',
+  '演示站E': '#演示站E', '演示站F': '#演示站F', '演示站D': '#江西演示站D',
+  '演示站H': '#演示站H', '演示站I': '#中铁20局-演示站I'
 };
 // 通用：克隆 → html2canvas → dataURL
 async function _capture(clone) {
@@ -2101,7 +2101,7 @@ function renderStationCards(report) {
         <div class="sc-mods">
           ${textMod('手动接管及异常原因', m.manualText)}
           ${textMod('本周重点', m.focusText)}
-          <div class="sc-mod sc-mod-bi"><div class="sc-mod-head"><span class="sc-mod-t">数据看板</span></div>
+          <div class="sc-mod sc-mod-panel"><div class="sc-mod-head"><span class="sc-mod-t">数据看板</span></div>
             <div class="sc-image" contenteditable="true" data-st="${escHtml(st)}">${img}</div>
           </div>
         </div>
