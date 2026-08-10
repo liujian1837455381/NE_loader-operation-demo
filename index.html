@@ -6507,11 +6507,15 @@ let _monitorLatestSnapshot = null;
 
 function getDemoDataDateRange() {
   const rows = [].concat(Array.isArray(store) ? store : [], Array.isArray(noOpStore) ? noOpStore : []);
-  const dates = rows.map(r => r && r.date).filter(Boolean).sort();
+  const dates = rows
+    .filter(r => Number(r && r.prodDuration) > 0 || Number(r && r.autoProdFeed) > 0)
+    .map(r => r && r.date)
+    .filter(Boolean)
+    .sort();
   if (dates.length) {
     return { start: dates[0], end: dates[dates.length - 1] };
   }
-  return { start: '2026-07-01', end: '2026-08-03' };
+  return { start: '2026-07-01', end: '2026-07-28' };
 }
 
 function shiftDateStr(dateStr, deltaDays) {
@@ -6531,7 +6535,8 @@ function setInputDateRange(startId, endId, range) {
 function initMonitorPage() {
   if (!_monitorInited) {
     _monitorInited = true;
-    setInputDateRange('monitorStartDate', 'monitorEndDate', getDemoDataDateRange());
+    const demoRange = getDemoDataDateRange();
+    setInputDateRange('monitorStartDate', 'monitorEndDate', demoRange);
   }
   monitorLoadSites();
   monitorRefresh();
